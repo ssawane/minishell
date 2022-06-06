@@ -6,7 +6,7 @@
 /*   By: ssawane <ssawane@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/06 16:21:59 by ssawane           #+#    #+#             */
-/*   Updated: 2022/06/06 17:59:27 by ssawane          ###   ########.fr       */
+/*   Updated: 2022/06/06 18:18:04 by ssawane          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,13 +20,16 @@ int	close_term_check(char *line)
 }
 
 int	main_parsing()
+{
+	
+}
 
 int	main()
 {
 	char	*prompt = "minishell $? ";
-	char	*line;
+	t_shell	shell;
 	
-	while (close_term_check(line = readline(prompt)))
+	while (close_term_check(shell.line = readline(prompt)))
 		printf("%s\n", line);
 	return (0);
 }
