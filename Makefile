@@ -1,6 +1,7 @@
 NAME	=	minishell
 
-SRCS	=	parsing.c	parsing_utils.c\
+SRCS	=	pars_main.c		pars_lib_ut.c		pars_line_corr.c\
+			pars_temp.c		pars_cmdtolist.c\
 			
 SRCS_B	=	\
 
