@@ -6,7 +6,7 @@
 /*   By: ssawane <ssawane@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/06 17:23:34 by ssawane           #+#    #+#             */
-/*   Updated: 2022/06/09 10:37:33 by ssawane          ###   ########.fr       */
+/*   Updated: 2022/06/09 13:54:37 by ssawane          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -144,5 +144,27 @@ t_cell	*ft_cellnew(char *content)
 		new -> type = 2;
 	new -> next = NULL;
 	return (new);
+}
+
+char	*ft_strjoin(char const *s1, char const *s2)
+{
+	char	*str;
+	int		i;
+	int		j;
+
+	i = 0;
+	j = 0;
+	if (!s1)
+		return (NULL);
+	str = (char *)malloc(sizeof(*s1) * (ft_strlen(s1) + ft_strlen(s2) + 1));
+	if (str == NULL)
+		return (NULL);
+	while (s1[i] != '\0')
+		str[j++] = s1[i++];
+	i = 0;
+	while (s2[i] != '\0')
+		str[j++] = s2[i++];
+	str[j] = '\0';
+	return (str);
 }
 

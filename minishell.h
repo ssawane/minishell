@@ -6,7 +6,7 @@
 /*   By: ssawane <ssawane@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/06 17:27:19 by ssawane           #+#    #+#             */
-/*   Updated: 2022/06/09 10:27:00 by ssawane          ###   ########.fr       */
+/*   Updated: 2022/06/09 15:15:38 by ssawane          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@ typedef struct s_shell {
 	char	**words;
 	t_cell	*cells;
 	t_cmd	*cmds;
+	char	*tmp;
 }	t_shell;
 
 int		ft_strcmp(const char *s1, const char *s2);
@@ -44,10 +45,12 @@ char	**ft_split(char const *s, char c);
 void	ft_celladd_back(t_cell **cell, t_cell *new);
 t_cell	*ft_cellnew(char *content);
 int		ft_strlen(const char *s);
+char	*ft_strjoin(char const *s1, char const *s2);
 void	line_correcting(t_shell *shell);
 t_cmd	*cmd_cells_convert(t_shell *shell);
 
 void	print(t_shell *shell);
 void	print2(t_shell *shell);
+void	print3(t_shell *shell);
 
 #endif

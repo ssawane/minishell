@@ -6,7 +6,7 @@
 /*   By: ssawane <ssawane@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/06 16:21:59 by ssawane           #+#    #+#             */
-/*   Updated: 2022/06/08 15:58:38 by ssawane          ###   ########.fr       */
+/*   Updated: 2022/06/09 16:39:22 by ssawane          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,8 @@ int	main(int ac, char **av)
 		{
 			main_parsing(&shell);
 			// print(&shell);
-			print2(&shell);
+			 print2(&shell);
+			print3(&shell);
 		}
 	}
 	return (0);
