@@ -6,7 +6,7 @@
 /*   By: ssawane <ssawane@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/06 17:23:34 by ssawane           #+#    #+#             */
-/*   Updated: 2022/06/09 13:54:37 by ssawane          ###   ########.fr       */
+/*   Updated: 2022/06/09 23:50:37 by ssawane          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -165,6 +165,34 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	while (s2[i] != '\0')
 		str[j++] = s2[i++];
 	str[j] = '\0';
+	return (str);
+}
+
+char	*ft_substr(char const *s, unsigned int start, size_t len)
+{
+	char	*str;
+	size_t	i;
+	char	*r;
+
+	if (!s)
+		return (NULL);
+	r = (char *)s;
+	if ((size_t)ft_strlen(r) < len)
+		len = ft_strlen(r);
+	str = (char *)malloc(sizeof(char) * (len + 1));
+	if (!str)
+		return (NULL);
+	i = 0;
+	if (start < (unsigned int)ft_strlen(r))
+	{
+		while (i < len)
+		{
+			str[i] = s[start];
+			start++;
+			i++;
+		}
+	}
+	str[i] = '\0';
 	return (str);
 }
 

@@ -6,7 +6,7 @@
 /*   By: ssawane <ssawane@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/06 16:21:59 by ssawane           #+#    #+#             */
-/*   Updated: 2022/06/09 16:39:22 by ssawane          ###   ########.fr       */
+/*   Updated: 2022/06/10 09:21:10 by ssawane          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,17 +53,19 @@ void	main_parsing(t_shell *shell)
 	shell->cmds = cmd_cells_convert(shell);
 }
 
-int	main(int ac, char **av)
+int	main(int ac, char **av, char **envp)
 {
 	t_shell	shell;
 
+	shell.envv = envp;
 	if (argc_check(ac, av))
 	{
 		while (close_term_check(shell.line = readline("minishell>$ ")))
 		{
 			main_parsing(&shell);
+			// main_exec(&shell);
 			// print(&shell);
-			 print2(&shell);
+			// print2(&shell);
 			print3(&shell);
 		}
 	}
