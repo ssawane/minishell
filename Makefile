@@ -6,12 +6,12 @@ SRCS	=	pars_main.c		pars_lib_ut.c		pars_line_corr.c\
 			
 SRCS_B	=	\
 
-HEADER	=	minishell.h
+HEADER	=	include/minishell.h
 OBJ		=	$(patsubst %.c, %.o, $(SRCS))
 OBJ_B	=	$(SRCS_B:%.c=%.o)
 
 CC		=	gcc
-CFLAGS	=	-Wall -Wextra -Werror -I$(HEADER)
+CFLAGS	=	-Wall -Wextra -Werror
 LFLAGS	=	-lreadline
 
 .PHONY	:	all clean fclean re bonus

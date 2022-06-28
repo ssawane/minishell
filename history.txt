@@ -133,3 +133,23 @@ cat temp | wc -l | echo 123\
 cat temp | wc -l | echo 123\
 cat temp | wc -l | echo 123\
 cat temp | wc -l | echo 123\
+hello
+echo 123
+env
+make clean
+ls
+echo "user"
+echo "USER"
+echo "$USER"
+echo '$USER'
+cat temp
+cat $temp
+make
+cat tej
+sdflkj$user
+sdflkj$user
+sdflkj $user
+sdflkj$user
+$usersd
+$user$sd
+man ascii

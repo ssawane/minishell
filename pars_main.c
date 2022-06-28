@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "minishell.h"
+#include "./include/minishell.h"
 
 int	argc_check(int ac, char **av)
 {
@@ -188,7 +188,7 @@ int	main(int ac, char **av, char **envp)
 				// print(&shell);
 				// print2(&shell);
 				// print3(&shell);
-				// print3(&shell);
+				print3(&shell);
 			}
 			ft_free(&shell);
 			if (shell.close == 1)

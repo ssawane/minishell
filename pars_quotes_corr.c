@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "minishell.h"
+#include "./include/minishell.h"
 
 int		whichquote(char *str)
 {
@@ -80,6 +80,11 @@ char	*quotes_deleting(char *str, int a)
 	return (tmp);
 }
 
+void	dollar_proccessing(char *word)
+{
+	
+}
+
 void	quotes_correcting(t_shell *shell)
 {
 	t_cell	*tmp;
@@ -100,6 +105,8 @@ void	quotes_correcting(t_shell *shell)
 				tmp->word = quotes_deleting(tmp->word, 2);
 				free(tmp2);
 			}
+		if (whichquote(tmp->word) == 1 || whichquote(tmp->word) == 0)
+			dollar_proccessing(tmp->word);
 		tmp = tmp->next;
 	}
 }

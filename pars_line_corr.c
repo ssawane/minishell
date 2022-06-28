@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "minishell.h"
+#include "./include/minishell.h"
 
 int	redirects_counter(char *line)
 {
@@ -22,6 +22,8 @@ int	redirects_counter(char *line)
 	while(line[++i])
 	{
 		if (line[i] == '|')
+			k++;
+		else if (line[i] == '$')
 			k++;
 		else if(line[i] == '>')
 		{
@@ -105,6 +107,11 @@ int	spaces_adding(t_shell *shell)
 				if (shell->line[i] == '<')
 					tmp[j++] = shell->line[i++];
 				tmp[j++] = ' ';
+			}
+			else if (shell->line[i] == '$' && !isquoted(shell->line, i))
+			{
+				tmp[j++] = ' ';
+				tmp[j++] = shell->line[i++];
 			}
 			else
 				tmp[j++] = shell->line[i++];
