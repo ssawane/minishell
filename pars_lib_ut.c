@@ -6,7 +6,7 @@
 /*   By: ssawane <ssawane@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/06 17:23:34 by ssawane           #+#    #+#             */
-/*   Updated: 2022/06/09 23:50:37 by ssawane          ###   ########.fr       */
+/*   Updated: 2022/06/21 13:08:55 by ssawane          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,7 +75,8 @@ char	*record(char *t, int *start, int finish)
 	int		i;
 
 	i = 0;
-	w = malloc(sizeof(char) * (finish - *start + 1));
+	w = NULL;
+	w = (char *)malloc(sizeof(char) * (finish - *start + 1));
 	while (*start < finish)
 	{
 		w[i] = t[*start];
@@ -99,7 +100,7 @@ char	**ft_split(char const *s, char c)
 	j = 0;
 	if (!s)
 		return (NULL);
-	str = malloc((words((char *)s, c) + 1) * sizeof(char *));
+	str = (char **)malloc((words((char *)s, c) + 1) * sizeof(char *));
 	if (!str)
 		return (NULL);
 	while (i <= (size_t)ft_strlen((char *)s))
@@ -135,7 +136,7 @@ t_cell	*ft_cellnew(char *content)
 	new = malloc(sizeof(t_cell));
 	if (new == NULL)
 		return (NULL);
-	new -> word = content;
+	new -> word = ft_strdup(content);
 	new -> type = 1;
 	if (!ft_strcmp(content, "|"))
 		new -> type = 3;
@@ -154,8 +155,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 	i = 0;
 	j = 0;
-	if (!s1)
-		return (NULL);
+	// if (!s1)
+	// 	return (NULL);
 	str = (char *)malloc(sizeof(*s1) * (ft_strlen(s1) + ft_strlen(s2) + 1));
 	if (str == NULL)
 		return (NULL);
@@ -191,6 +192,29 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 			start++;
 			i++;
 		}
+	}
+	str[i] = '\0';
+	return (str);
+}
+
+char	*ft_strdup(const char *s)
+{
+	char	*str;
+	int		i;
+
+	i = 0;
+	while (s[i] != '\0')
+	{
+		i++;
+	}
+	str = (char *)malloc(sizeof(*s) * (i + 1));
+	if (str == NULL)
+		return (NULL);
+	i = 0;
+	while (s[i])
+	{
+		str[i] = s[i];
+		i++;
 	}
 	str[i] = '\0';
 	return (str);

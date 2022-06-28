@@ -2,6 +2,7 @@ NAME	=	minishell
 
 SRCS	=	pars_main.c		pars_lib_ut.c		pars_line_corr.c\
 			pars_temp.c		pars_cmdtolist.c	exec_main.c\
+			pars_fdopen.c	pars_quotes_corr.c\
 			
 SRCS_B	=	\
 

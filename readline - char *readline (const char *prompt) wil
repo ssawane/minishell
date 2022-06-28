@@ -1,0 +1,88 @@
+readline - char *readline (const char *prompt) will read a line from the terminal and  return  it, using  prompt  as a prompt. the  caller  must  free it when finished
+
+rl_clear_history - void rl_clear_history (void) Clear the history list by deleting all of the entries, in the same manner as the History library's clear_history() function. This differs from clear_history because it frees private data Readline saves in the history list.
+
+rl_on_new_line - int rl_on_new_line (void) Tell the update functions that we have moved onto a new (empty) line, usually after outputting a newline
+
+rl_replace_line - void rl_replace_line (const char *text, int clear_undo) Replace the contents of rl_line_buffer with text. The point and mark are preserved, if possible. If clear_undo is non-zero, the undo list associated with the current line is cleared.
+
+rl_redisplay - void rl_redisplay (void) Change what's displayed on the screen to reflect the current contents of rl_line_buffer.
+
+add_history - void add_history (const char *string) Place string at the end of the history list. The associated data field (if any) is set to NULL. If the maximum number of history entries has been set using stifle_history(), and the new number of history entries would exceed that maximum, the oldest history entry is removed.
+
+signal - sighandler_t signal(int signum, sighandler_t handler) Системный вызов signal() устанавливает новый обработчик сигнала с номером signum в соответствии с параметром sighandler, который может быть функцией пользователя, SIG_IGN или SIG_DFL
+
+sigaction - int sigaction(int signum, const struct sigaction *act, struct sigaction *oldact) Системный вызов sigaction используется для изменения действий процесса при получении соответствующего сигнала
+
+sigemptyset - int sigemptyset(sigset_t *set) Функции sigsetops(3) позволяют производить операции над наборами сигналов POSIX. sigemptyset инициализирует набор сигналов, указанный в set, и "очищает" его от всех сигналов.
+
+sigdelset - int sigdelset(sigset_t *set, int signum) sigaddset и sigdelset добавляют сигналы signum к set и удаляют эти сигналы из набора соответственно.
+
+getcwd - char *getcwd(char *buf, size_t size) копирует абсолютный путь к текущему рабочему каталогу в массиве, на который указывает buf, имеющий длину size.
+
+chdir - int chdir(const char *path) изменяет текущий каталог каталог на path
+
+int stat(const char *file_name, struct stat *buf) 
+int fstat(int filedes, struct stat *buf)
+int lstat(const char *file_name, struct stat *buf)
+Эти функции возвращают информацию об указанном файле. Для этого не требуется иметь права доступа к файлу, хотя потребуются права поиска во всех каталогах, указанных в полном имени файла. stat возвращает информацию о файле file_name и заполняет буфер buf. lstat идентична stat, но в случае символьных сылок она возвращает информацию о самой ссылке, а не о файле, на который она указывает. fstat идентична stat, только возвращается информация об открытом файле, на который указывает filedes (возвращаемый open(2)), а не о file_name.
+
+unlink - int unlink(const char *pathname) удаляет имя из файловой системы. Если это имя было последней ссылкой на файл и больше нет процессов, которые держат этот файл открытым, данный файл удаляется и место, которое он занимает освобождается для дальнейшего использования.
+
+opendir - DIR *opendir(const char *name) открывает поток каталога, соответствующий каталогу name, и возвращает указатель на этот поток. Поток устанавливается на первой записи в каталоге.
+
+readdir - struct dirent *readdir(DIR *dir) возвращает указатель на следующую запись каталога в структуре dirent, прочитанную из потока каталога. Каталог указан в dir. Функция возвращает NULL по достижении последней записи или если была обнаружена ошибка.
+
+closedir - int closedir(DIR *dir) закрывает поток, связанный с каталогом dir. Описатель потока dir будет недоступен после вызова этой функции. 
+
+isatty - int isatty(int desc) Возвращает 1, если desc является открытым описателем, соединенным с терминалом, в противном случае возвращает 0. 
+
+ttyname - char *ttyname(int fd) возвращает указатель на полное имя устройства терминала, заканчивающееся на NUL, открытого на описателе файла fd, или NULL при ошибках (например, если fd не подключен к терминалу). Возвращаемое значение может указывать на статические данные, которые могут быть перезаписаны следующим вызовом.
+
+ttyslot - int ttyslot(void) возвращает индекс текущей записи пользователя в некотором файле.
+
+ioctl - int ioctl(int d, int request, ...) манипулирует базовыми параметрами устройств, представленных в виде специальных файлов. В частности, многими оперативными характеристиками специальных символьных файлов (например терминалов) можно управлять через ioctl запросы. В качестве аргумента d должен быть указан открытый файловый дескриптор.
+
+getenv - char *getenv(const char *name) ищет в списке окружения строку, совпадающую со строкой, указанной в name. Строки имеют вид имя = значение.  
+
+pid_t tcgetpgrp(int fd)
+int tcsetpgrp(int fd, pid_t pgrp)
+Функция tcgetpgrp() возвращает идентификатор группы процессов для основной группы процессов терминала, ассоциированного с fd, который должен быть управляющим терминалом для вызывающего процесса.
+Функция tcsetpgrp() делает группу процессов с идентификатором pgrp основной группой процессов на терминале, ассоциированном с fd, который должен быть управляющим терминалом для вызывающего процесса, и все еще быть ассоциированным с его сессией. Более того, pgrp должно быть (непустой) группой процессов, принадлежащих к той же сессии, что и вызывающий процесс.
+
+int tgetent(char *bp, const char *name); 
+int tgetflag(char *id); 
+int tgetnum(char *id); 
+char *tgetstr(char *id, char **area); 
+char *tgoto(const char *cap, int col, int row); 
+int tputs(const char *str, int affcnt, int (*putc)(int));
+These routines are included as a conversion aid for programs that use the termcap library. Their parameters are the same and the routines are emulated using the terminfo database. Thus, they can only be used to query the capabilities of entries for which a terminfo entry has been compiled.
+The tgetent routine loads the entry for name. It returns 1 on success, 0 if there is no such entry, and -1 if the terminfo database could not be found. The emulation ignores the buffer pointer bp.
+The tgetflag routine gets the boolean entry for id, or zero if it is not available.
+The tgetnum routine gets the numeric entry for id, or -1 if it is not available.
+The tgetstr routine returns the string entry for id, or zero if it is not available. Use tputs to output the returned string. The return value will also be copied to the buffer pointed to by area, and the area value will be updated to point past the null ending this value.
+Only the first two characters of the id parameter of tgetflag, tgetnum and tgetstr are compared in lookups.
+The tgoto routine instantiates the parameters into the given capability. The output from this routine is to be passed to tputs.
+The tputs routine is described on the curs_terminfo(3X) manual page. It can retrieve capabilities by either termcap or terminfo name.
+
+
+https://www.youtube.com/watch?v=uGdik-DDMEw
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
