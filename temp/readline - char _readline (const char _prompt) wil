@@ -66,9 +66,6 @@ The tgoto routine instantiates the parameters into the given capability. The out
 The tputs routine is described on the curs_terminfo(3X) manual page. It can retrieve capabilities by either termcap or terminfo name.
 
 
-https://www.youtube.com/watch?v=uGdik-DDMEw
-
-
 
 
 
