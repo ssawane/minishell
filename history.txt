@@ -1,155 +1,286 @@
-kjlsdkjf
-esjf
-lksdjf sdlkfj sdlkjfsd
-kljd 3 2 2
-lksdjf
-kljsd ke
-lksdjf
-ec"ho hello
-ec"ho" hello
-ec"ho" "hello"
-ec"ho" 'hello'
-ec "ho" good "'I o'u "r
+sdflkjsdfklj
+3489yu34
+"$USER"
+< sdjfhd >jhsdf 3f3
+< temp1 cat > temp2
+<temp1 echo sdjkfh > temp3
+sdflkj sdlfkj2342f 
 sdfsdf
-dfklj dfklg dflk
-lkj4 jh3 ""dsf
-djsfh 
-cat dfklgj | dfgdfg
-cat | cat
-< temp cat > temp2 
-< temp cat > temp2 | cat
-< temp cat > temp2 | ls
-< temp cat > temp2  | ls
-< temp cat > temp3
-< temp cat > temp4
-echo 123  > temp4
-echo 123 > temp5
-echo 123 > temp 5
-cat 123 > temp 5
-cat 123
-echo 123
-echo 123
-echo 123 > temp5
-cat temp
-cat temp
-cat temp
-cat temp > temp2
-cat temp > temp2
-cat temp > temp2
-cat temp > temp8
-cat temp > temp3
-cat temp > temp3
-< temp78 > temp 79
-< temp78 cat > temp 79
-< temp78 cat > temp79
-< temp78  > temp791
-kjsdhf
-cat
-echo 123
-cat temp
-cat temp | wc -l
-d
-ds[[[[[[A[[[[[[[
-sdf
-sdf
-cat temp
-cat temp | wc -l
-x
-eitei
-xtxt
-sfd
-eidsfljs4
-e
-cat temp
-cat temp
-cat yt
-cat temp
-cat temp wc
-cat temp wc
-cat temp wc
-cat temp | wc -l
-oe
-a tm
-iurctepl
-stmp
-ex
-cat temp
-cat temp
-cat temp | echo 123
-catte
-sjf
-t
- mpdkle9iat
-ev
-c  |w 
-sdd
-s 
-[[[B[BB[[AAAA[[AsA[[AA[AAA[
-s
-lekf
-ei
-cat temp | wc -l
-kjd
-cat temp | wc -l | echo 123
-cat temp | wc -l | echo 123
-cat temp | wc -l | echo 123
-cat temp | wc -l | echo 123
-cat temp | wc -l | echo 123
-cat temp | wc -l | echo 123
-cat temp | wc -l | echo 123
-cat temp | wc -l | echo 123
-tp  l|eh 2
-t
-w lh13
-se
-cte |c-  co13aemct eh 
-cat temp | wc -l | echo 123
-sd
-cat temp | wc -l | echo 123
-cat temp | wc -l
-cat temp | wc -l | echo 123
-cat temp
-cat temp | wc -l
-cat temp | wc -l | echo 123
-cat temp | wc -l
-cat temp | wc -l | echo 123
-ds
-cat temp | wc -l | echo 123
--l
-cat temp | wc -l | echo 123
-cat temp | wc -l | echo 123
-dsd
-cat temp | wc -l > ter3
-cat temp | wc -l | echo 123
-cat temp | wc -l 
-cat temp | wc -l > ter3
-cat temp | wc -ls > ter3
-cat temp | wc -lsa > ter3
-car temp | wc -lsa > ter3
-cat temp | wc -l | echo 123
-sd
-cat temp | wc -l | echo 123\
-cat temp | wc -l | echo 123\
-cat temp | wc -l | echo 123\
-cat temp | wc -l | echo 123\
-cat temp | wc -l | echo 123\
-hello
-echo 123
-env
-make clean
+sdfsdf
+sdfsdf
+f
+dsf
+sdfkjh sdfkjh3 fkjh
+< temp1 echo 123 > temp 5
+< temp1 echo 123 > tempfs
+jk23f 3490u sdlkfj sdfopj 34"poj dl seoi"
+sdfkjlkj"kjsdfhjksdfhkjh" dflkgjdfgkl          ""
+sdfkjlkj"kjsdfhjksdfhkjh" dflkgjdfgkl          a""
+sdfkjlkj"kjsdfhjksdfhkjh" dflkgjdfgkl          a"""
+sdfkjlkj"kjsdfhjksdfhkjh" dflkg"jdfgkl          a"
+<>sdf
+><
+>sdf
+<temp1>sad3
+<temp1 >sad3
+< temp1 > sad3
+< temp1 
+< temp1 cat
+< temp1
+<kjsdhf>jhsdf
+sdfjk<dsfij>sdfj<<sdfj\sdfkj|skdjlf
+"sdf<>"
+"sdf<>" <>
+"sdf<>" ><
+cd src/parse
 ls
-echo "user"
-echo "USER"
-echo "$USER"
-echo '$USER'
-cat temp
-cat $temp
-make
-cat tej
-sdflkj$user
-sdflkj$user
-sdflkj $user
-sdflkj$user
-$usersd
-$user$sd
-man ascii
+df<sdg>sdf<|sdf
+df<sdg>sdf<f|sdf
+df<sdg>sdf<f|sdf
+df<sdg>sd"f<f|s"df
+< sdg > sdf>sd"f<f|s"df
+<kjsdfh
+<temp1
+<tempd
+>kjsdhf
+>tejds
+<temp1
+<temp1
+<temp1
+<temp1
+<temp1
+<temp1 cat
+>>temp1
+>>jhsdf
+>>PJHGEDDD
+>KGHI&#GIU#
+>>#UY#YDDD
+>temp1
+>>786345345
+>>QWQWQW
+>>LPLPLPLPPLLP
+>jhsdf
+<temp1
+<temp1
+< tem2
+<temp1
+<temp1
+<temp1
+>>wekjfh
+make re
+lkjsda
+sdlfk sdfklj 34klgj sdl;kj
+"$USER $USER"
+"$USER $USER"
+$USER
+"$USER"
+"$USER $USER"
+$USER $USER
+'$USER $USER'
+"$USER $USER"
+"$USER $USER"
+"$USER $USER"
+"$USER $USER"
+"$USER $USER"
+"$USER $USER"
+"$USER $USER"
+"$USER $USER"
+"$USER $USER"
+"$USER $USER"
+"$USER $USER"
+"$USER $USER"
+"$USER $USER"
+"$USER $USER"
+"$USER $USER"
+"$USER"
+"$USER $USER"
+"$USER $USER $USR"
+"$USER $USER $USR""$USER $USER $USR""$USER $USER $USR""$USER $USER $USR""$USER $USER $USR""$USER $USER $USR""$USER $USER $USR""$USER $USER $USR""$USER $USER $USR"
+"$USER $USER $USR""$USER $USER $USR"
+"$USER $USER $USR"
+"$USER $USER $USR""
+"$USER $USER $USR"""
+"$USER $USER $USR""$USER $USER $USR"
+"$USER $USER $USR""$USER $USER $USR""$USER $USER $USR""$USER $USER $USR""$USER $USER $USR""$USER $USER $USR""$USER $USER $USR""$USER $USER $USR""$USER $USER $USR""$USER $USER $USR""$USER $USER $USR""$USER $USER $USR""$USER $USER $USR""$USER $USER $USR""$USER $USER $USR""$USER $USER $USR""$USER $USER $USR""$USER $USER $USR""$USER $USER $USR""$USER $USER $USR""$USER $USER $USR""$USER $USER $USR""$USER $USER $USR""$USER $USER $USR"v
+"$USER $USER $USR""$USER $USER $USR""$USER $USER $USR""$USER $USER $USR""$USER $USER $USR""$USER $USER $USR""$USER $USER $USR""$USER $USER $USR""$USER $USER $USR""$USER $USER $USR""$USER $USER $USR""$USER $USER $USR""$USER $USER $USR""$USER $USER $USR""$USER $USER $USR""$USER $USER $USR""$USER $USER $USR""$USER $USER $USR"v
+"$USER $USER $USR""$USER $USER $USR""$USER $USER $USR""$USER $USER $USR""$USER $USER $USR""$USER $USER $USR""$USER $USER $USR""$USER $USER $USR""$USER $USER $USR"
+"$USER $USER $USR""$USER $USER $USR""$USER $USER $USR""$USER $USER $USR""$USER $USER $USR""$USER $USER $USR""$USER $USER $USR""$USER $USER $USR""$USER $USER $USR"
+"$USER"
+"$USER $USER"
+"$USER $USER""$USER $USER""$USER $USER""$USER $USER""$USER $USER""$USER $USER""$USER $USER""$USER $USER""$USER $USER""$USER $USER""$USER $USER""$USER $USER""$USER $USER""$USER $USER""$USER $USER""$USER $USER"v
+"$USER $USER""$USER $USER""$USER $USER""$USER $USER""$USER $USER""$USER $USER""$USER $USER""$USER $USER""$USER $USER""$USER $USER""$USER $USER""$USER $USER""$USER $USER""$USER $USER""$USER $USER""$USER $USER""$USER $USER""$USER $USER""$USER $USER""$USER $USER""$USER $USER""$USER $USER""$USER $USER""$USER $USER""$USER $USER""$USER $USER""$USER $USER""$USER $USER""$USER $USER""$USER $USER""$USER $USER""$USER $USER""$USER $USER""$USER $USER""$USER $USER""$USER $USER""$USER $USER""$USER $USER""$USER $USER""$USER $USER""$USER $USER""$USER $USER""$USER $USER""$USER $USER""$USER $USER""$USER $USER""$USER $USER""$USER $USER""$USER $USER""$USER $USER""$USER $USER""$USER $USER""$USER $USER""$USER $USER""$USER $USER""$USER $USER"d"$USER $USER""$USER $USER""$USER $USER"
+"$USER $USER"vsv"$USER $USER"vsvvsvvvvv"$USER $USER""$USER $USER""$USER $USER""$USER $USER""$USER $USER""$USER $USER""$USER $USER""$USER $USER""$USER $USER""$USER $USER""$USER $USER""$USER $USER""$USER $USER""$USER $USER""$USER $USER""$USER $USER""$USER $USER""$USER $USER""$USER $USER""$USER $USER"v
+"$USER $USER"
+"$USER $USER""$USER $USER""$USER $USER""$USER $USER""$USER $USER""$USER $USER""$USER $USER""$USER $USER""$USER $USER""$USER $USER"
+"$USER $USER""$USER $USER""""""""""""$USER $USER"
+"$USER $USER""$USER $USER"""""""""
+"$USER $USER""$USER $USER""""""""""
+"$USER"
+$USER
+$USER
+sdf
+"$USER "
+%$jhsdgf\
+$USER
+$USER
+$USER
+$USER
+$USER
+"$USER $USER"
+"$USER $USER""$USER $USER""$USER $USER""$USER $USER""$USER $USER""$USER $USER""$USER $USER""$USER $USER""$USER $USER""$USER $USER""$USER $USER""$USER $USER"
+"$USER $USER""$USER $USER" '"$USER $USER""$USER $USER""$USER $USER""$USER $USER"'
+"$USER $US'ER"
+"$USER $USER""$USER $USER""$USER $USER""$USER $USER"
+"$USER $USER"
+"$USER $USER""$USER $USER""$USER $USER""$USER $USER"
+"$USER $USER""$USER $USER""$USER $USER""$USER $USER""$USER $USER""$USER $USER""$USER $USER""$USER $USER""$USER $USER""$USER $USER""$USER $USER""$USER $USER""$USER $USER""$USER $USER""$USER $USER""$USER $USER""$USER $USER""$USER $USER""$USER $USER""$USER $USER""$USER $USER""$USER $USER""$USER $USER""$USER $USER"
+$$KLsdjf
+$$$LKJ$Lkjsdf
+$USER
+$$USER
+$USER
+$USERs
+$$$LKJ$Lkjsdf
+$$$LKJ$Lkjsdf
+$$$LKJ$Lkjsdf
+$Lkjsdf
+LKJ$Lkjsdf
+$$$LKJ$Lkjsdf
+$$LKJ$Lkjsdf
+$LKJ$Lkjsdf
+$$$LKJ$Lkjsdf
+$$$LKJ$Lkjsdf
+$$$LKJ$Lkjsdf
+$$$LKJ$Lkjsdf
+$$$L$Lkjsdf
+$$$L$Lkjsdf$
+$$$L$Lkjsdf$$
+Lkjsdf$$
+Lkjsdf$$
+Lkjsdf$$$$$
+f$$$$$
+Lkjsdf$$
+$$$L$Lkjsdf$$
+$$L$Lkjsdf$$
+L$Lkjsdf$$
+$Lkjsdf$$
+L$Lkjsdf$$
+$USER$Lkjsdf$$
+$$$L$Lkjsdf$$
+$$$L$Lkjsdf
+$$$L$Lkjsdf$
+$$$L$Lkjsdf$$
+$$$L$Lkjsdf$$
+$$$L$Lkjsdf
+$$$L$Lkjsdf$$
+$$$L$Lkjsdf$$
+$$$L$Lkjsdf$$
+$$$L$Pkjsdf$$
+$$$L$Pkjsdf$$.
+$$$L$Pkjsdf$$
+$$$L$Pkjsdf$$
+$$$L$Pkjsdf$$
+$$$L$Pkjsdf$$
+L$Pkjsdf$$
+L$Pkjsdf$$
+$$$L$Pkjsdf$$
+$$$L$Pkjsdf$$
+"G"$""$"$""$"$"$G
+"G"$""$"$""$"$"$G"
+"G"$""$"$""$"$"$G"
+"G"$""$"$""$"$"$G"
+"G"$""$"$""$"$
+"G"$""
+"G"$""$"
+"G"$""$"$"
+"G"$""$""
+"G"$""$"$""$"$"$G"
+"G"$""$"$""$"$"$G"
+"G"$""$"$""$"$"$G"
+"G"$""$"$""$"$"$G"
+"G"$""$"$""$"$"$G"
+"G"$""$"$""$"$"$G"
+"G"$""$"$""$"$"$G"
+"G"$""$"$""$"$"$G"$$$$$$$
+$$$L$Pkjsdf$$
+$$$L$Pkjsdf$$
+""$USER$$$$USER
+HKUSD 34l
+HKUSD 34l"$USER $US'ER"
+HKUSD 34l "$USER $US'ER"
+""$USER$$$$USER
+<jhsdf
+< sdfg34
+< hdsgf4
+< dsjfh3
+< djh3
+lkjgd
+sdjklf 43ljh
+sdkflj 34lkj dk 
+"G"$""$"$""$"$"$G"
+$$$L$Pkjsdf$$
+$$$L$Pkjsdf$
+"G"$""$"$""$"$"$G"
+$$$L$Pkjsdf$
+$$$L$Pkjsdf$$
+$$$L$Pkjsdf$""$USER
+$$$L$Pkjsdf$"$USER"
+$$$L$Pkjsdf$"$USER"
+$$$L$Pkjsdf$"$USER"
+$$$L$Pkjsdf$"$USER
+$$$L$Pkjsdf$""$USER
+$$$L$Pkjsdf$"$USER"
+$$$L$Pkjsdf$"$USER"
+$$$L$Pkjsdf$
+$$$L$Pkjsdf$"$USER"
+$$$L$Pkjsdf$"$USER"
+$$$L$Pkjsdf$"$USER"
+$$$L$Pkjsdf$"$USER"
+$$$L$Pkjsdf$"$USER"
+$$$L$Pkjsdf$"$USER"
+$$$L$Pkjsdf$"$USER"
+$$$L$Pkjsdf$"$USER"
+$$$L$Pkjsdf$"$USER"
+$$$L$Pkjsdf$"$USER"
+$$$L$Pkjsdf$"$USER"
+$$$L$Pkjsdf$"$USER"
+$$$L$Pkjsdf$"$USER"
+$$$L$Pkjsdf$"$USER"
+$$$L$Pkjsdf$"$USER"
+$$$L$Pkjsdf$"$USER"
+$$$L$Pkjsdf$""$USER
+$$$L$Pkjsdf$"$USER"
+$$$L$Pkjsdf$"$USER"
+$$$L$Pkjsdf$""$USER
+$$$L$Pkjsdf$""$USER$$$L$Pkjsdf$""$USER
+<< t1 
+<< t1
+<< t1 
+<< t1
+<< t1
+<<t1
+<< t1
+<< t1
+<< t1
+3487h"F
+3487h"F"
+3487h"F"""
+3487h"F""$USER"
+3487h"F"$USER'
+3487h"F"'$USER'
+make re
+""
+""
+kjhs
+       
+      
+ $$$L$Pkjsdf$""$USER
+./minishell 
+"'$USER'"
+'"$USER"'
+dfklj
+4kjldf 43kjdf
+$USER
+env
+dsf
+k4jp3

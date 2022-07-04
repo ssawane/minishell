@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   exec_main.c                                        :+:      :+:    :+:   */
+/*   execute.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ssawane <ssawane@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/09 23:37:23 by ssawane           #+#    #+#             */
-/*   Updated: 2022/06/26 14:12:53 by ssawane          ###   ########.fr       */
+/*   Updated: 2022/07/02 14:44:46 by ssawane          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./include/minishell.h"
+#include "../../includes/minishell.h"
 
 char	**paths_pars(char **envp)
 {
@@ -34,23 +34,23 @@ char	**paths_pars(char **envp)
 	return (paths);
 }
 
-void	execute(t_cmd *cmd, t_shell *shell)
+void	execute(t_cmd *cmd)
 {
 	int		i;
 	char	*cmd_final;
 
 	i = -1;
-	while (shell->paths[++i])
+	while (shl.paths[++i])
 	{
-		cmd_final = ft_strjoin(shell->paths[i], cmd->oper[0]);
+		cmd_final = ft_strjoin(shl.paths[i], cmd->oper[0]);
 		if (!access(cmd_final, X_OK))
 		{
-			execve(cmd_final, cmd->oper, shell->envv);
+			execve(cmd_final, cmd->oper, shl.envv);
 			break ;
 		}
 		free(cmd_final);
 	}
-	if (shell->paths[i] == 0)
+	if (shl.paths[i] == 0)
 	{
 		perror ("minishell: command not found");
 		exit (0);
@@ -69,7 +69,7 @@ void	execute(t_cmd *cmd, t_shell *shell)
 // 	execute(cmd, shell);
 // }
 
-void	ft_child(t_shell *shell, t_cmd *cmd)
+void	ft_child(t_cmd *cmd)
 {	
 	if (cmd->in != 0)
 	{
@@ -81,32 +81,32 @@ void	ft_child(t_shell *shell, t_cmd *cmd)
 		dup2(cmd->out, STDOUT_FILENO);
 		close(cmd->out);
 	}
-	execute(cmd, shell);
+	execute(cmd);
 }
 
-void	pipes_check(t_shell *shell)
+void	pipes_check(void)
 {
 	t_cmd	*tmp;
 
-	tmp = shell->cmds;
-	shell->pipes = -1;
+	tmp = shl.cmds;
+	shl.pipes = -1;
 	while (tmp)
 	{
-		shell->pipes++;
+		shl.pipes++;
 		tmp = tmp->next;
 	}
 }
 
-void	pipes_generating(t_shell *shell)
+void	pipes_generating(void)
 {
 	int	i;
 
 	i = -1;
-	shell->mpp = malloc(sizeof(int *) * shell->pipes);
-	while (++i < shell->pipes)
+	shl.mpp = malloc(sizeof(int *) * shl.pipes);
+	while (++i < shl.pipes)
 	{
-		shell->mpp[i] = malloc(sizeof(int) * 2);
-		pipe(shell->mpp[i]);
+		shl.mpp[i] = malloc(sizeof(int) * 2);
+		pipe(shl.mpp[i]);
 	}
 }
 
@@ -124,38 +124,38 @@ void	fd_changing(t_cmd	*cmd)
 	}
 }
 
-void	close_pipes(t_shell *shell)
+void	close_pipes(void)
 {
 	int	i;
 
-	if (shell->mpp)
+	if (shl.mpp)
 	{
 		i = -1;
-		while (shell->mpp[++i])
+		while (shl.mpp[++i])
 		{
-			close(shell->mpp[i][0]);
-			close(shell->mpp[i][1]);
+			close(shl.mpp[i][0]);
+			close(shl.mpp[i][1]);
 		}
 		i = -1;
-		while (shell->mpp[++i])
-			free(shell->mpp[i]);
-		free(shell->mpp);
+		while (shl.mpp[++i])
+			free(shl.mpp[i]);
+		free(shl.mpp);
 	}
 }
 
-void	multipipe(t_shell *shell)
+void	multipipe(void)
 {
 	t_cmd	*tmp;
 	int		i;
 	pid_t	*child;
 	int		status;
 
-	printf("shell->pipes: %d\n", shell->pipes);
-	tmp = shell->cmds;
+	printf("shell->pipes: %d\n", shl.pipes);
+	tmp = shl.cmds;
 	i = -1;
-	pipes_generating(shell);
-	child = (pid_t *)malloc(sizeof(pid_t) * shell->pipes);
-	while (++i < shell->pipes)
+	pipes_generating();
+	child = (pid_t *)malloc(sizeof(pid_t) * shl.pipes);
+	while (++i < shl.pipes)
 	{
 		child[i] = fork();
 		if (child[i] == 0)
@@ -164,35 +164,35 @@ void	multipipe(t_shell *shell)
 			if (i != 0)
 			{
 				waitpid(-1, &status, 0);
-				dup2(shell->mpp[i - 1][0], STDIN_FILENO);
+				dup2(shl.mpp[i - 1][0], STDIN_FILENO);
 			}
-			dup2(shell->mpp[i][1], STDOUT_FILENO);
+			dup2(shl.mpp[i][1], STDOUT_FILENO);
 			fd_changing(tmp);
-			close_pipes(shell); // close_pipes
+			close_pipes(); // close_pipes
 			kill(getppid(), 9);
-			execute(tmp, shell);
+			execute(tmp);
 		}
 		tmp = tmp->next;
 	}
 }
 
-void	main_exec(t_shell *shell)
+void	main_exec(void)
 {
 	int		status;
 	pid_t	child;
 	
-	shell->paths = paths_pars(shell->envv);
-	pipes_check(shell);
-	if (shell->cmds)
+	shl.paths = paths_pars(shl.envv);
+	pipes_check();
+	if (shl.cmds)
 	{
-		if (!shell->pipes)
+		if (!shl.pipes)
 		{
 			child = fork();
 			if (child == 0)
-				ft_child(shell, shell->cmds);
+				ft_child(shl.cmds);
 			waitpid(child, &status, 0);
 		}
 		else
-			multipipe(shell);
+			multipipe();
 	}
 }

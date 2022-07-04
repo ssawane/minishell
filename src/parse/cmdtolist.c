@@ -1,55 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   pars_cmdtolist.c                                   :+:      :+:    :+:   */
+/*   cmdtolist.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ssawane <ssawane@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/08 15:54:59 by ssawane           #+#    #+#             */
-/*   Updated: 2022/06/21 13:23:27 by ssawane          ###   ########.fr       */
+/*   Updated: 2022/07/03 12:13:46 by ssawane          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./include/minishell.h"
-
-t_cmd	*ft_cmdnew(void)
-{
-	t_cmd	*new;
-
-	new = malloc(sizeof(t_cmd));
-	if (new == NULL)
-		return (NULL);
-	new -> in = 0;
-	new -> out = 1;
-	new -> next = NULL;
-	new -> oper = NULL;
-	return (new);
-}
-
-t_cmd	*ft_cmdlast(t_cmd *cmd)
-{
-	if (!cmd)
-		return (NULL);
-	while (cmd -> next)
-		cmd = cmd -> next;
-	return (cmd);
-}
-
-void	ft_cmdadd_back(t_cmd **cmd, t_cmd *new)
-{
-	t_cmd	*p;
-
-	if (!new)
-		return ;
-	if (!*cmd)
-	{
-		*cmd = new;
-		return ;
-	}
-	p = ft_cmdlast(*cmd);
-	p -> next = new;
-}
-
+#include "../../includes/minishell.h"
 
 void	cmds_proc(t_cell *t, t_cmd *unit)
 {
@@ -80,14 +41,33 @@ void	cmds_proc(t_cell *t, t_cmd *unit)
 		unit->oper = ft_split(t->word, '\n');
 }
 
-t_cmd	*cmd_cells_convert(t_shell *shell)
+void	cmd_cells_convert_step2(t_cell **t, t_cmd *unit, t_cmd *nodes)
+{
+	while ((*t) != NULL && (*t)->type != 3)
+	{
+		while ((*t)->next && (*t)->type != 1 && (*t)->type != 3)
+			(*t) = (*t)->next;
+		if ((*t)->type == 1)
+			cmds_proc((*t), unit);
+		while ((*t) != NULL && (*t)->type == 0)
+			(*t) = (*t)->next;
+	}
+	if ((*t) != NULL && (*t)->next && (*t)->type == 3)
+	{
+		unit = ft_cmdnew();
+		ft_cmdadd_back(&nodes, unit);
+		(*t) = (*t)->next;
+	}
+}
+
+t_cmd	*cmd_cells_convert(void)
 {
 	t_cell	*t;
 	t_cell	*m;
 	t_cmd	*nodes;
 	t_cmd	*unit;
 
-	t = shell->cells;
+	t = shl.cells;
 	unit = ft_cmdnew();
 	nodes = unit;
 	while (t != NULL)
@@ -100,25 +80,7 @@ t_cmd	*cmd_cells_convert(t_shell *shell)
 			t = t->next;
 		}
 		t = m;
-		while (t != NULL && t->type != 3)
-		{
-			while (t->next && t->type != 1 && t->type != 3)
-				t = t->next;
-			if (t->type == 1)
-				cmds_proc(t, unit);
-			while (t != NULL && t->type == 0)
-				t = t->next;
-		}
-		if (t != NULL && t->next && t->type == 3)
-		{
-			unit = ft_cmdnew();
-			ft_cmdadd_back(&nodes, unit);
-			t = t->next;
-		}
+		cmd_cells_convert_step2(&t, unit, nodes);
 	}
-	if (!ft_strcmp(nodes->oper[0], "exit"))
-		shell->close = 1;
-	return(nodes);
+	return (nodes);
 }
-
-// sdfsdf>dfgdf|fgf

@@ -1,36 +1,64 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: ssawane <ssawane@student.42.fr>            +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2022/07/01 16:28:48 by ssawane           #+#    #+#              #
+#    Updated: 2022/07/03 14:41:23 by ssawane          ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 NAME	=	minishell
-
-SRCS	=	pars_main.c		pars_lib_ut.c		pars_line_corr.c\
-			pars_temp.c		pars_cmdtolist.c	exec_main.c\
-			pars_fdopen.c	pars_quotes_corr.c\
-			
-SRCS_B	=	\
-
-HEADER	=	include/minishell.h
-OBJ		=	$(patsubst %.c, %.o, $(SRCS))
-OBJ_B	=	$(SRCS_B:%.c=%.o)
-
 CC		=	gcc
+HEADER	=	include/minishell.h
 CFLAGS	=	-Wall -Wextra -Werror
-LFLAGS	=	-lreadline
+RLINE	=	-lreadline
+RM		=	rm -f
+LIBS	=	-L libft -lft
+MN_DR	=	src/main/
+LFT_DR	=	src/libft_mod/
+PRS_DR	=	src/parse/
+EXE_DR	=	src/execute/
+MAIN	=	minishell
+EXECUTE	=	execute
+LIBMOD	=	celllst cmdlst
+PARSE	=	cmdtolist fdopen spc_add spc_change parsing quot_corr dollar_corr
+SRCS	=	$(addsuffix .c, $(addprefix $(MN_DR), $(MAIN)))\
+			$(addsuffix .c, $(addprefix $(PRS_DR), $(PARSE)))\
+			$(addsuffix .c, $(addprefix $(EXE_DR), $(EXECUTE)))\
+			$(addsuffix .c, $(addprefix $(LFT_DR), $(LIBMOD)))\
+			$(addsuffix .c, $(addprefix temp/, temp_print))
+OBJ		=	$(SRCS:%.c=%.o)
 
-.PHONY	:	all clean fclean re bonus
+.PHONY	:	all clean fclean re
 
 all		:	$(NAME)
 
-$(NAME)	:	$(OBJ) $(HEADER)
-	$(CC) $(CFLAGS) $(SRCS) $(LFLAGS) -o $(NAME)
+$(NAME)	:	$(OBJ)
+			@echo "\n"
+			@make -C libft
+			@echo "\033[0;32mCompiling minishell..."
+			@$(CC) $(LIBS) $(RLINE) $(CFLAGS) $(OBJ) -o $(NAME)
+			@echo "\n\033[0;32mDone !"
 
-%.o		:	%.c $(HEADER)
-	$(CC) $(CFLAGS) -c $< -o $@
-
-bonus	:
-	@make OBJ="$(OBJ_B)" SRCS="$(SRCS_B)" all
-
-clean	:
-	@rm -f $(OBJ) $(OBJ_B)
+%.o		:	%.c
+			@printf "\033[0;33mGenerating minishell objects... %-33.33s\r" $@
+			@$(CC) $(CFLAGS) -c $< -o $@
+			
+clean	:	
+			@echo "\n\033[0;31mCleaning libft..."
+			@make -C libft clean
+			@echo "\nRemoving binaries..."
+			@$(RM) $(OBJ)
+			@echo "\033[0m"
 
 fclean	:	clean
-	@$(RM) $(NAME)
-
+			@echo "\033[0;31mDeleting executable..."
+			@make -C libft fclean
+			@$(RM) $(NAME)
+			@echo "\033[0m"
+			
 re		:	fclean all
+

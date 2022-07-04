@@ -1,30 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   pars_temp.c                                        :+:      :+:    :+:   */
+/*   temp_print.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ssawane <ssawane@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/08 11:15:38 by ssawane           #+#    #+#             */
-/*   Updated: 2022/06/21 11:48:42 by ssawane          ###   ########.fr       */
+/*   Updated: 2022/07/02 14:30:42 by ssawane          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./include/minishell.h"
+#include "../includes/minishell.h"
 
-void	print(t_shell *shell)
+void	print(void)
 {
 	int	i = -1;
-	// printf("line2: %s\n", shell->line);
-	while (shell->words[++i])
-		printf("%s\n", shell->words[i]);
+	printf("line: %s\n", shl.line);
+	if (shl.words)
+	{
+		while (shl.words[++i])
+			printf("%s\n", shl.words[i]);
+	}
+	else
+		printf("%s\n", "nowords");
 }
 
-void	print2(t_shell *shell)
+void	print2()
 {
 	t_cell	*tmp;
 	
-	tmp = shell->cells;
+	tmp = shl.cells;
 	while (tmp != NULL)
 	{
 		printf("%s\n", tmp->word);
@@ -33,12 +38,12 @@ void	print2(t_shell *shell)
 	}
 }
 
-void	print3(t_shell *shell)
+void	print3()
 {
 	t_cmd	*tmp;
 	int		i;
 
-	tmp = shell->cmds;
+	tmp = shl.cmds;
 	while (tmp != NULL)
 	{
 		printf("in: %d\n", tmp->in);
@@ -48,7 +53,11 @@ void	print3(t_shell *shell)
 		{
 			i = -1;
 			while (tmp->oper[++i])
+			{
+				printf("i: %d\n", i);
 				printf("cmd: %s\n", tmp->oper[i]);
+				printf("strlen: %d\n", ft_strlen(tmp->oper[i]));
+			}
 		}
 		tmp = tmp->next;
 	}
