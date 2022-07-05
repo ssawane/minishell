@@ -6,13 +6,13 @@
 #    By: ssawane <ssawane@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/01 16:28:48 by ssawane           #+#    #+#              #
-#    Updated: 2022/07/03 14:41:23 by ssawane          ###   ########.fr        #
+#    Updated: 2022/07/05 13:38:06 by ssawane          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	=	minishell
 CC		=	gcc
-HEADER	=	include/minishell.h
+HEADER	=	includes/minishell.h
 CFLAGS	=	-Wall -Wextra -Werror
 RLINE	=	-lreadline
 RM		=	rm -f
@@ -22,7 +22,7 @@ LFT_DR	=	src/libft_mod/
 PRS_DR	=	src/parse/
 EXE_DR	=	src/execute/
 MAIN	=	minishell
-EXECUTE	=	execute
+EXECUTE	=	execute paths_exe
 LIBMOD	=	celllst cmdlst
 PARSE	=	cmdtolist fdopen spc_add spc_change parsing quot_corr dollar_corr
 SRCS	=	$(addsuffix .c, $(addprefix $(MN_DR), $(MAIN)))\

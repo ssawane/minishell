@@ -6,7 +6,7 @@
 /*   By: ssawane <ssawane@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/06 17:27:19 by ssawane           #+#    #+#             */
-/*   Updated: 2022/07/03 18:04:42 by ssawane          ###   ########.fr       */
+/*   Updated: 2022/07/05 13:40:43 by ssawane          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,9 +55,9 @@ typedef struct s_shl {
 	t_cmd	*cmds;
 }	t_shl;
 
-t_shl	shl;
+extern t_shl	shl;
 
-//libft_moderated
+//libft
 int		ft_strcmp(const char *s1, const char *s2);
 void	ft_celladd_back(t_cell **cell, t_cell *new);
 void	ft_cmdadd_back(t_cmd **cmd, t_cmd *new);
@@ -78,6 +78,8 @@ int		dollar_check(char *word, int i);
 
 //execute
 void	main_exec(void);
+char	**paths_pars(char **envp);
+void	execute(t_cmd *cmd);
 
 //temp
 void	print(void);

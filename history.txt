@@ -284,3 +284,10 @@ $USER
 env
 dsf
 k4jp3
+sdfk
+< history.txt cat > temp2
+< history.txt cat > temp2
+< history.txt cat > temp3
+touch tercg
+touch 123
+touch 123

@@ -6,11 +6,13 @@
 /*   By: ssawane <ssawane@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/01 17:02:34 by ssawane           #+#    #+#             */
-/*   Updated: 2022/07/04 15:00:44 by ssawane          ###   ########.fr       */
+/*   Updated: 2022/07/05 13:45:51 by ssawane          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/minishell.h"
+
+t_shl	shl;
 
 void	ft_free(void)
 {
