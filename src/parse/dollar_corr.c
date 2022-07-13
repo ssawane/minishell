@@ -6,7 +6,7 @@
 /*   By: ssawane <ssawane@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/03 13:54:12 by ssawane           #+#    #+#             */
-/*   Updated: 2022/07/03 13:56:31 by ssawane          ###   ########.fr       */
+/*   Updated: 2022/07/12 16:12:35 by ssawane          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,7 +95,7 @@ char	*dollar_step2(char *str, int *p)
 	{
 		k = *p;
 		while (str[*p] && str[*p] != 34 && str[*p] != 39
-			&& str[*p] != '$' && str[*p] != ' ')
+			&& str[*p] != '$' && str[*p] != ' ' && str[*p - 1] != '?')
 			*p += 1;
 		if (*p > k)
 			res = add_fromenv(str, k, p);

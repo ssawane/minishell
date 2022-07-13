@@ -6,7 +6,7 @@
 /*   By: ssawane <ssawane@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/08 11:15:38 by ssawane           #+#    #+#             */
-/*   Updated: 2022/07/02 14:30:42 by ssawane          ###   ########.fr       */
+/*   Updated: 2022/07/07 11:04:43 by ssawane          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,9 +56,10 @@ void	print3()
 			{
 				printf("i: %d\n", i);
 				printf("cmd: %s\n", tmp->oper[i]);
-				printf("strlen: %d\n", ft_strlen(tmp->oper[i]));
+				// printf("strlen: %d\n", ft_strlen(tmp->oper[i]));
 			}
 		}
+		printf("%c", '\n');
 		tmp = tmp->next;
 	}
 }

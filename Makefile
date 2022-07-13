@@ -6,7 +6,7 @@
 #    By: ssawane <ssawane@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/01 16:28:48 by ssawane           #+#    #+#              #
-#    Updated: 2022/07/05 13:38:06 by ssawane          ###   ########.fr        #
+#    Updated: 2022/07/12 20:54:15 by ssawane          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,7 @@ MN_DR	=	src/main/
 LFT_DR	=	src/libft_mod/
 PRS_DR	=	src/parse/
 EXE_DR	=	src/execute/
-MAIN	=	minishell
+MAIN	=	minishell signals buildin
 EXECUTE	=	execute paths_exe
 LIBMOD	=	celllst cmdlst
 PARSE	=	cmdtolist fdopen spc_add spc_change parsing quot_corr dollar_corr

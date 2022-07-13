@@ -6,7 +6,7 @@
 /*   By: ssawane <ssawane@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/08 15:54:59 by ssawane           #+#    #+#             */
-/*   Updated: 2022/07/03 12:13:46 by ssawane          ###   ########.fr       */
+/*   Updated: 2022/07/09 17:40:09 by ssawane          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,23 +41,24 @@ void	cmds_proc(t_cell *t, t_cmd *unit)
 		unit->oper = ft_split(t->word, '\n');
 }
 
-void	cmd_cells_convert_step2(t_cell **t, t_cmd *unit, t_cmd *nodes)
+t_cell	*cmd_cells_cont(t_cell *t, t_cmd **unit, t_cmd **nodes)
 {
-	while ((*t) != NULL && (*t)->type != 3)
+	while (t != NULL && t->type != 3)
 	{
-		while ((*t)->next && (*t)->type != 1 && (*t)->type != 3)
-			(*t) = (*t)->next;
-		if ((*t)->type == 1)
-			cmds_proc((*t), unit);
-		while ((*t) != NULL && (*t)->type == 0)
-			(*t) = (*t)->next;
+		while (t->next && t->type != 1 && t->type != 3)
+			t = t->next;
+		if (t->type == 1)
+			cmds_proc(t, *unit);
+		while (t != NULL && t->type == 0)
+			t = t->next;
 	}
-	if ((*t) != NULL && (*t)->next && (*t)->type == 3)
+	if (t != NULL && t->next && t->type == 3)
 	{
-		unit = ft_cmdnew();
-		ft_cmdadd_back(&nodes, unit);
-		(*t) = (*t)->next;
+		*unit = ft_cmdnew();
+		ft_cmdadd_back(nodes, *unit);
+		t = t->next;
 	}
+	return (t);
 }
 
 t_cmd	*cmd_cells_convert(void)
@@ -80,7 +81,7 @@ t_cmd	*cmd_cells_convert(void)
 			t = t->next;
 		}
 		t = m;
-		cmd_cells_convert_step2(&t, unit, nodes);
+		t = cmd_cells_cont(t, &unit, &nodes);
 	}
-	return (nodes);
+	return(nodes);
 }

@@ -6,7 +6,7 @@
 /*   By: ssawane <ssawane@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/01 17:02:34 by ssawane           #+#    #+#             */
-/*   Updated: 2022/07/05 13:45:51 by ssawane          ###   ########.fr       */
+/*   Updated: 2022/07/12 23:10:56 by ssawane          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 t_shl	shl;
 
-void	ft_free(void)
+void	rowed_free(void)
 {
 	int		i;
 	t_cell	*tmp;
@@ -55,7 +55,7 @@ void	ft_free(void)
 	shl.close = 0;
 }
 
-void	free_env(void)
+void	finish_free(void)
 {
 	int	i;
 
@@ -64,8 +64,10 @@ void	free_env(void)
 	{
 		while(shl.envv[++i])
 			free(shl.envv[i]);
-		free(shl.cmds->oper);
+		free(shl.envv);
 	}
+	write(1, "exit\n", 5);
+	exit(shl.exit);
 }
 
 int	close_term_check(char *line)
@@ -105,7 +107,8 @@ void	shell_initialization(char **envp)
 	shl.cmds = NULL;
 	shl.envv = NULL;
 	shl.close = 0;
-	shl.mpp = 0;
+	shl.fdp = 0;
+	shl.exit = -1;
 	local_env(envp);
 }
 
@@ -114,17 +117,22 @@ int	main(int ac, char **av, char **envp)
 	(void)ac;
 	(void)av;
 	shell_initialization(envp);
-	while (close_term_check(shl.line = readline("minishell>$ ")))
+	while (1)
 	{
+		shl.line = readline("minishell>$ ");
 		if (!main_parsing())
 		{
-			// main_exec(&shell);
 			// print();
 			// print2(&shell);
-			print3();
+			// print3();
+			main_exe();
+			// print3();
 		}
-		ft_free();
+		rowed_free();
+		if (shl.exit != -1)
+		{
+			finish_free();
+		}
 	}
-	// free_env();
 	return (0);
 }

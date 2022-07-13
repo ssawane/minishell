@@ -6,7 +6,7 @@
 /*   By: ssawane <ssawane@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/06 17:27:19 by ssawane           #+#    #+#             */
-/*   Updated: 2022/07/05 13:40:43 by ssawane          ###   ########.fr       */
+/*   Updated: 2022/07/12 20:56:22 by ssawane          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@
 # include <readline/history.h>
 # include <sys/types.h> // check
 # include <sys/stat.h> // check
+# include <sys/wait.h>
 # include <fcntl.h>
 
 typedef struct s_cell {
@@ -41,11 +42,13 @@ typedef struct s_cmd {
 
 typedef struct s_shl {
 	int		i;
+	int		exit;
 	int		envnum;
 	int		pipes;
 	int		close;
-	int		pp[2];
-	int		**mpp;
+	int		*pids;
+	int		**fdp;
+	int		exit_code;
 	char	*line;
 	char	**words;
 	char	**envv;
@@ -77,13 +80,20 @@ int		main_parsing(void);
 int		dollar_check(char *word, int i);
 
 //execute
-void	main_exec(void);
+void	main_exe(void);
 char	**paths_pars(char **envp);
 void	execute(t_cmd *cmd);
+void	free_paths(void);
+void		isbuildin(t_cmd *cmd);
+int		digscheck(char *str);
+
+//signals
+void	signals_proc(void);
 
 //temp
 void	print(void);
 void	print2(void);
 void	print3(void);
+char	*ft_find_path(t_cmd *tmp);
 
 #endif

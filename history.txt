@@ -291,3 +291,882 @@ sdfk
 touch tercg
 touch 123
 touch 123
+sdf
+make clean
+
+echo 123
+touch t1
+echo 123
+fds
+d
+cat t1
+cat t1
+sdf
+cat t1
+< t1 > t2
+< t1 cat > t2
+< t1 cat > t3
+cat t1
+cat t1
+cat t1
+cat t1
+cat t1
+cat t1
+cat t1
+cat t1
+cat t1
+cat t1
+
+
+cat t1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ываываываыва
+важлоавполж
+kjsdfsd 
+dfgkljdf
+echo 123
+echo 123
+dsdfg
+dfgdfgsdf
+echo 123
+xi
+
+etss
+a
+
+dadd
+
+
+dawc
+wwsat
+c |
+d1 wt
+t1l
+xtt
+cat t1
+cat t1[[[[[[[[[[[[[[[[
+cat t1
+cat t1
+cat t1
+cat t1
+eh 2
+cat t1 | grep a
+ls -la | wc -l
+ls -la | wc -l
+ls -la
+cat t1
+cat t1
+cat t1 | wc -l
+cat t1 | wc -l
+cat t1 | wc -l
+cat t1 \ wc -l
+cat t1 | wc -l
+cat t1 | wc -l
+cat t1 | wc -l
+cat t1 | wc -l
+cat t1 | wc -l
+cat t1
+cat t1
+cat t1
+cat t1 > t2
+cat t1 
+cat t1 | wc -l
+cat t1
+cat t1
+cat t1
+cat t1 | wc -l
+cat t1
+cat t1 | wc -l
+cat t1 | wc -l
+cat t1
+
+
+cat t1
+cat t1 | wc -l
+cat t1
+cat t1 | wc -l
+cat t1
+cat t1 | gre a
+cat t1 | grep a
+cat t1 | gr
+cat t1
+cat t1 | wc -l
+cat t1
+cat t1 | wc -l
+cat t1
+cat t1 | wc -l
+cat t1
+cat t1 | wc -l
+cat t1 | wc -l
+cat t1
+cat t1 | wc -l
+cat t1\
+cat t1\
+cat t1
+cat t1
+cat t1 | wc -l
+cat t1
+cat t1 | wc -l
+cat t1
+cat t1 | wc -l
+cat t1
+cat t1 | wc -l
+cat t1
+cat t1 | wc -l
+cat t1 | wc -l
+cat t1 | wc -l
+cat t1
+cat t1 | wc -l
+cat t1
+cat t1 | wc -l
+cat t1 | wc -l
+cat t1 | wc -l
+cat t1 | wc -l
+cat t1 | wc -l
+cat t1 | wc -l
+cat t1 | wc -l
+cat t1 | wc -l
+cat t1 | wc -l
+cat t1 | wc - l | grep a
+cat t1 | wc -l
+cat t1 | wc -l
+cat t1
+cat t1 | wc -l
+cat t1 | wc -l
+cat t1 | wc -l
+cat t1 | wc -l
+cat t1 | wc -l
+cat t1 | wc -l
+cat t1 | wc -l
+cat t1 | wc -l
+cat t1 | wc -l
+cat t1 | wc -l
+cat t1 | wc -l
+cat t1 | wc -l
+cat t1 | wc -;
+cat t1 | wc -l
+cat t1 | wc -l
+cat t1 | wc -l
+cat t1 | wc -l
+cat t1 | wc -l
+cat t1 | wc -l
+cat t1 | wc -l
+cat t1 | wc -l
+cat t1 
+cat t1 | wc -l
+wc -l
+cat t1
+cat t1 | wc -l
+cat t1 | grep a
+cat t1 | grep d
+cat t1 | grep d
+cat t1 | grep d
+cat t1 | grep d
+cat t1 | grep d | grep f
+cat t1 "
+cat t1 | grep d
+cat t1 | grep d
+< t1 | cat
+cat t1 | grep d
+cat t1 | grep d
+cat t1 | grep d
+cat t1 | grep d
+cat t1
+cat t1 | grep d
+cat t1
+cat t1
+cat t1 | frep f
+cat t1 | grep f
+cat t1 | grep d
+cat t1 | grep d
+ls -la
+ls -la | wc -l
+ls -la | grep t
+ls -la | cat > g4
+ls -la | grep l | cat > g4
+< t1 grep d | cat > g4
+ls -la | grep l | cat > g4
+ls -la | grep l | cat > g4
+cat t1
+cat t1 | grep d
+cat t1
+cat t1 | grep d
+cat t1 | wc -l
+cat t1
+cat t1 | wc -l
+cat t1 | grep d
+cat t1 | grep d | cat 1
+cat t1 | grep d | wc 1
+cat t1 | grep d
+cat t1 | frep d
+cat t1 | grep d
+cat t1 | grep d | wc -l
+wc -l
+cat t1
+cat t1 | grep d | grep f
+cat t1 | grep d 
+cat t1 | grep d | grep i
+ls -la | grep a
+ls -la | grep g
+ls -la | grep a
+cat t1 | wc -l
+cat t1 | grep a
+ls -la | grep a
+ls -la | grep a
+cat t1 | grep a
+cat t1 | grep a | wc -l
+cat t1 | grep a
+cat t1 | grep a
+cat t1 | grep a | wc -l
+cat t1
+cat t1 | grep a
+cat t1 | grep a | wc -l
+cat t1 | grep a | wc -l
+cat t1 | grep a
+cat t1 | grep a | wc -l
+cat t1 | grep a
+ls -la
+ls -la | grep a
+ls -la | grep t
+ls -la | grep g
+ls -la | grep g | wc -l
+ls -la | grep g | wc -l | cat > 5t
+cat t1
+cat t1 | grep d
+cat t1 | grep d | wc -l
+cat t1 | grep d
+cat t1 | grep d | wc -l
+cat t1 | grep d | wc -l | cat > j5
+at t1 | grep d 
+cat t1 | grep d 
+cat t1 | grep d | wc -l | echo 123
+cat t1 | grep d | wc -l | echo 123
+cat t1 | grep d | wc -l | echo 123
+cat t1 | grep d | wc -l
+cat t1 | grep d | wc -l | echo 123
+cat t1 | grep d | wc -l | echo 123
+cat t1 | grep d | wc -l | echo 123
+cat t1 | grep d | wc -l | echo 123
+cat t1 | grep d | wc -l
+cat t1 | grep d | wc -l | echo 123
+cat t1 | grep d | wc -l | echo 123
+cat t1
+cat t1 | wc -l
+cat t1 | grep d | wc -l
+cat t1
+cat t1 | grep d
+cat t1 | grep d | wc -l
+cat t1
+cat t1 | grep d
+cat t1 | grep d | wc -l
+cat t1 | grep d | wc -l | echo 123
+cat t1 | grep d | cat > r4
+cat t1 | grep d | cat > r4
+cat t1
+cat t1 | grep d
+cat t1 | grep d | wc -l
+cat t1 | grep d | wc -l | cat h3
+cat t1 | grep d |  
+cat t1 | grep d
+cat t1 | grep d | grep k
+cat t1 | grep d | grep k | wc -l
+cat t1 | grep d | grep k | grp j
+cat t1 | grep d | grep k | grep j
+cat t1 | grep d | grep k | > ko1
+cat t1 | grep d | grep k | head -n 5
+cat t1 | grep d | grep k
+cat t1 | grep d | grep k
+ls -la
+ls -la | grep 2
+ls -la | grep 2
+ls -la | grep 2 | grep s
+ls -la | grep 2 | grep s | grep 5
+ls -la | grep 2 | car s | grep 5
+ls -la | grep 2 | grdep s | gsrep 5
+ls -la | grep 2 | grdep s | gsrep 5
+ls -la | grep 2 | grdep s
+ls -la | grep 2 | grep s
+cat t1
+cat t1 | grep d
+ls -la | grep 2 | grep d
+cat t1 | grep d
+cat t1 | grep d | wc -l
+ls -la | grep 2
+ls -la | wc -l
+ls -la
+ls -la | grep 2
+ls -la
+ls -la
+ls -la | grep f
+ls -la | grep f | wc -l
+cat t1
+cat t1 | grep 2
+cat t1 | grep 2 | grep 1
+cat t1
+cat t1 | grep 2
+cat t1 | grep d
+cat t1 | grep d | wc -l
+ls -la
+ls -la | grep 2
+ls -la | grep 2 | grep j
+ls -la | grep 2 | grep j | wc -l
+ls -la | grep 2 | grep 2
+ls -la | grep 2 | grep 2 | GREP M
+ls -la | grep 2 | grep 2 | grep m
+ls -la | grep 2 | grep m
+ls -la | grep 2 | grep m | GREP M
+ls -la | grep 2 | grep m | grep m
+cat t1
+cat t1
+ls -la
+ls -la | grep m
+ls -la | grep m | grep 2
+cat t1
+cat t1 | grep m
+ls -la
+ls -la | grep m
+ls -la | grep m | grep 2
+ls -la | grep m | grep 2 | grep 5
+ls -la | grep m | grep 2
+ls -la | grep m
+cat t1
+cat t1
+cat t1
+cat t1
+cat t1
+cat t1 | grep d
+cat t1 | grep d | wc -l
+ls -la
+ls -la | grep m | grep m | grep j
+ls -la | grep m | grep m
+ls -la | grep m | grep j
+ls -la | grep m | grep 2
+ls -la | grep m | grep 2 | grep m
+ls -la | grep m | grep 2 | grep j
+cat t1
+ls -la | grep m | grep 2 | grep j
+ls -la | grep m | grep 2
+cat t1
+ls -la | grep m | grep 2 | grep j
+ls -la | grep m | grep 2 
+ls -la | grep m |
+ls -la | grep m 
+cat t1
+ls -la | grep m | grep 2 | grep j
+ls -la | grep m | grep 2
+ls -la | grep m | grep 2 | grep 5
+ls -la | grep m | grep 2 | grep 0
+ls -la | grep m | grep 2 | wc -l
+ls -la | grep m | wc -l
+ls -la | grep m | grep 2
+ls -la | grep m | grep 2 | wc -l
+ls -la | grep m | grep 2 | wc -l
+ls -la | grep m | grep 2 | wc -l
+ls -la | grep m | grep 2 | wc -l
+ls -la | grep m | grep 2 | wc -l
+ls -la | grep m | grep 2 | wc -l
+ls -la | grep m | grep 2 | wc -l
+ls -la | grep m | grep 2 | wc -l
+ls -la | grep m | grep 2 | wc -l
+ls -la | grep m | wc -l
+ls -la | grep m | grep 2 | wc -l
+ls -la | grep m | grep 2 | wc -l
+ls -la | grep m | grep 2
+ls -la | grep m
+ls -la | grep m | grep 2 | wc -l
+ls -la | grep m | grep 2
+ls -la | grep m | grep 2 | wc -l
+ls -la | grep m | grep 2 
+ls -la | grep m | grep 2
+ls -la | grep m | grep 2 | wc -l
+ls -la | grep m | grep 2 | wc -l | echo 123
+ls -la | grep m | grep 2 | wc -l > h6
+ls -la | grep m | grep 2 | wc -l
+ls -la | grep m | grep 2
+ls -la | grep m | grep 2
+ls -la | grep m | grep 2 |ls -la | grep m | grep 2
+ls -la | grep m | grep 2
+ls -la | grep m | grep 2 | wc -l
+lkjddg
+cat t1
+dfsf
+cat t1
+cat t1 | wc -l
+cat t1 | wc -l
+ls -la | grep m | grep 2 | wc -l
+ls -la | grep m | grep 2
+ls -la | grep m | grep 2 | wc -l
+ls -la | grep m | grep 2 | wc -l
+ls -la | grep m | grep 2 | wc -l
+ls -la | grep m | grep 2 | wc -l
+ls -la | grep m | grep 2 | wc -l
+ls -la | grep m | grep 2 | wc -l
+ls -la | grep m | grep 2 | wc -l
+ls -la | grep m | grep 2 | wc -l
+ls -la | grep m | grep 2 | wc -l
+ls -la | grep m | grep 2
+ls -la | grep m | grep 2 | wc -l
+ls -la | grep m | grep 2 | wc -l
+ls -la | grep m | grep 2 | wc -l
+ls -la | grep m | grep 2 | wc -l
+ls -la | grep m | grep 2 | wc -l
+ls -la | grep m | grep 2
+ls -la | grep m | grep 2
+ls -la | grep m | grep 2 | wc -l > j5
+ls -la | grep m | grep 2 | wc -l
+ls -la | grep m | grep 2 | wc -l
+ls -la | grep m | grep 2 | wc -l
+ls -la | grep m | grep 2 | wc -l
+ls -la | grep m | grep 2 | wc -l
+ls -la | grep m | grep 2 | wc -l
+ls -la | grep m | grep 2 | wc -l
+ls -la | grep m | grep 2 | wc -l
+ls -la | grep m | grep 2 | wc -l
+ls -la | grep m | grep 2 | wc -l
+ls -la | grep m | grep 2 | wc -l
+ls -la | grep m | grep 2 | wc -l
+ls -la | grep m | grep 2 | wc -l
+ls -la | grep m | grep 2 | wc -l
+ls -la | grep m | grep 2 | wc -l
+ls -la | grep m | grep 2 | wc -l
+ls -la | grep m | grep 2 | wc -l
+ls -la | grep m | grep 2 | wc -l
+зцв
+pwd
+ls
+bin/ls
+bin/ls
+/bin/ls
+ls
+ls -l
+/bin/ls -l
+/bin/ls -la
+учше
+/bin/ls
+sdf
+dsgdfg
+dfdfg
+3kl4jg
+f4f
+g4g4
+dsg4
+dfglkj | sdkjfh
+sdfsdf
+ls
+bin/ls
+/bin/ls
+ls -la | wc -l
+'ls -la'
+"ls -la"
+"ls" -la
+'ls' -la
+sdfjh | jksdhf
+cat t1 | wc -l
+cat t1 | wc -l | cat 1
+ls -la
+ls -la | grep 2
+cat sdkl
+ls -la | grep 2
+cat t1 | exit
+sdfd
+exit 45
+sdf
+dsffg
+exit 
+exit
+exit
+exit 45
+exit 
+exit
+exit
+exit
+exit
+exit
+exit
+exit 45
+exit dfgjkh
+exit 45 34
+ls -la | exit
+exit | ls -la
+exit 344 | ls -la
+exit 344 | ls -la
+exit 34 | ls -la
+exit 3 | ls -la
+exit 345
+exit 345345345
+exit 34 | ls
+exit 34
+exit 24 | ls
+ls | exit 24
+ls | exit 24 23
+exit 24 23
+exit 24
+ls | exit 3
+ls | exit 33
+< t1
+$? | exit
+$? | ls
+sdf | ls
+$sdf | ls
+$sdf
+sdfhj
+echo $?
+echo $?s
+echo $s
+echo ?s
+$f
+$PATH
+$USER
+$US
+$USERT
+$ UYD
+$UYD
+$USERW
+$DJHD
+$JKDH
+$HDG
+$JKHD
+$GD
+$JKHD
+$HGD
+jhgsd
+sdf
+$HMGD
+$JHG sdf
+exit
+exit
+jsdfh
+exit
+exit
+ls | exit
+exit
+exit
+exit
+exit
+$KJHFF
+$JKGHD
+$jhsdgf
+"                   "
+"                   "
+"""""""""""""
+$"""""""
+$$$$$$$$$$$$$$$"""""""""''''''
+exit
+""
+"""""";
+"""""";
+""""""
+$jhsgdf
+< t1 > t3
+exit -12
+$jdsf
+exit
+| dfg
+$kusdf
+exit
+$jhgdsf
+$hds
+< t1 > f4
+exit
+$bds
+$khsd
+$hsw
+jhgds
+$HGHJG
+$HGF
+""
+| $JHGF
+| sdf
+| kjhdsf
+| $jhgsdf
+exit
+| $JFDE
+| sdf
+| cat t1
+$HGVHG
+$USER
+echo $USER
+echo '$USER'
+exit
+$JHG
+| $DKJH
+| $kjhsdf
+| dsf
+| sdf
+| $HGD
+exit
+| $jhgsdf
+"" | $JHGD
+exit
+| $JHGF
+$HGFD
+"" | $DJKHF | $USER
+
+
+
+
+exit
+exit 54
+exit | ls
+$JHFG
+make clean
+exit
+cat t1
+exit
+cat t1
+dfg
+exit
+ls -la
+учше
+exit
+make clean
+dfjkh
+dfgdfg
+cat t1
+exit
+df
+dfgdfg
+sddfg
+sddg
+exit
+dgdfgdfg
+учше
+exit
+gdfgdfg
+dsgg55g
+3t34tf
+rdfg |df fg
+rdfg |df
+rdfg |dfdfg
+make clean
+
+
+ыв
+
+
+
+
+exit
+exit
+lkj
+
+
+
+
+echo """"""""
+
+ec"ho" $str1 $str4
+jkhjkh
+sdfsdf
+sdfdf
+
+
+
+
+
+dfgdfgdfg
+dfdfg
+dfdfgdfg
+<< t1 | grep a
+<< t1 cat | grep a
+<< t1 cat | grep a
+<< t1 cat | grep a
+<< t1 cat | grep a
+<< t1 cat | grep a
+$$$
+$$$PATH
+$$PATH
+exit
+$?
+cask
+$?
+echo $?
+echo $?
+echo $?
+echo $?
+echo $?
+echo $?
+sdfsdf
+echo $?
+echo $?
+$?$?$?$?$$?
+$?$?$?$?$?
+echo $?
+echo $?
+exit
+$PATH
+exit
+$PATH
+$?
+$? + $?
+$?$?
+$?s + $?
+$?$USER
+exit
+$?s
+exit
+$?s
+exit
+$?s
+$?s$?$?$?$?
+$?s$?a$?$?$?
+kill 72173
+%?
+ываыва
+$KJFH
+$PATH
+$?
+$??$?$?$$?
+$??$?$?$$?$?S
+exit
+$?
+$$
+$$?
+exit
+$?
+$?s
+$? $?
+$?$?
+$?
+$?
+$?
+dfg
+cat
+$?
+cat t1
+$?
+$?
+ls
+$?
+make -n
+make fclean
+make -n
+cd ..
+ls
+ls
+exit
+cd ..
+ls
+/bin/ls
+
+
+
+
+        
+   
+ls =la
+ls -la
+/bin/ls dfg
+$?
+echo "cat lol.c | cat > lol.c"
+echo '$USER'
+env
+'cat | cat | ls'
+"'$USER'"
+make clean
+""
+$JHSGD
+exit
+exit
+exit | exit
+exit | exit | xeit
+exit | exit | exit
+exit | exit | exit dfg
+exit | exit | exit dfg
+exit | exit | 
+exit | exit 
+exit
+exit
+exit
+sdfsdf
+exit
+ls
+exit
+exit
+exit
+ды -дф Ё цс -д
+ls -la
+exit
+exit
+exit
+exit
+exit
+exit
+exir
+exit
+exit | exit
+exit 34 | exit
+exit 34s | exit
+exit 34s | exit 43 34
+exit
+exit
+exit
+exit
+exit
+exit
+exit
+exit
+sdf
+exit
+exit
+exit
+exit
+exit
+exit
+sdfsdf
+exit
+dsfgdfg
+exit
+exit 54
+lkdfg
+$?
+dfg,mdfg
+exit
+asfdas
+exit
+sdfsdf
+fd
+exit
+ljksd
+exit
+dfgklj
+exit
+dfgjklh
+exit
+ljkfg
+dflk
+exit
+fdjkl
+exit
+ls
+exit
+sdfjkh
+exit
+exit jkhdf
+exit 65 34
+exit
+env
+env | wc -l
+env | grep PWD
+enp
+exit
+enp
+enp | grep USER
+exit
