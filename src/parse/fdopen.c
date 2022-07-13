@@ -6,20 +6,20 @@
 /*   By: ssawane <ssawane@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/14 11:27:19 by ssawane           #+#    #+#             */
-/*   Updated: 2022/07/03 14:19:16 by ssawane          ###   ########.fr       */
+/*   Updated: 2022/07/13 18:55:37 by ssawane          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/minishell.h"
 
-void	heredoc_proc_step2(t_cmd *cmd, char *res, char *line)
+void	heredoc_next(t_cmd *cmd, char *res, char *line)
 {
 	if (res)
 	{
-		pipe(cmd->end);
-		write(cmd->end[1], res, ft_strlen(res));
-		cmd->in = cmd->end[0];
-		close(cmd->end[1]);
+		pipe(cmd->pfd);
+		write(cmd->pfd[1], res, ft_strlen(res));
+		cmd->in = cmd->pfd[0];
+		close(cmd->pfd[1]);
 		free(res);
 	}
 	free(line);
@@ -35,7 +35,7 @@ void	heredoc_proc(t_cell *cell, t_cmd *cmd)
 	while (1)
 	{
 		line = readline("> ");
-		if (!ft_strcmp(line, cell->word))
+		if (!line || !ft_strcmp(line, cell->word))
 			break ;
 		if (res)
 		{
@@ -50,7 +50,7 @@ void	heredoc_proc(t_cell *cell, t_cmd *cmd)
 		else
 			res = line;
 	}
-	heredoc_proc_step2(cmd, res, line);
+	heredoc_next(cmd, res, line);
 }
 
 void	open_read(t_cell *cell, t_cmd *cmd)

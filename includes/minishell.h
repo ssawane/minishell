@@ -6,7 +6,7 @@
 /*   By: ssawane <ssawane@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/06 17:27:19 by ssawane           #+#    #+#             */
-/*   Updated: 2022/07/12 20:56:22 by ssawane          ###   ########.fr       */
+/*   Updated: 2022/07/13 18:55:40 by ssawane          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,8 +34,7 @@ typedef struct s_cell {
 typedef struct s_cmd {
 	int				in; 
 	int				out;
-	int				end[2];
-	pid_t			child;
+	int				pfd[2];
 	char			**oper;
 	struct s_cmd	*next;
 }	t_cmd;
@@ -56,6 +55,7 @@ typedef struct s_shl {
 	t_cell	*cells;
 	t_cell	*t1;
 	t_cmd	*cmds;
+	t_cmd	*cmds2;
 }	t_shl;
 
 extern t_shl	shl;
@@ -84,16 +84,18 @@ void	main_exe(void);
 char	**paths_pars(char **envp);
 void	execute(t_cmd *cmd);
 void	free_paths(void);
-void		isbuildin(t_cmd *cmd);
+void	isbuildin(t_cmd *cmd);
 int		digscheck(char *str);
+void	finish_free(void);
 
 //signals
 void	signals_proc(void);
+void	inside_pr(int signum);
+void	inside_heredoc(int signum);
 
 //temp
 void	print(void);
 void	print2(void);
 void	print3(void);
-char	*ft_find_path(t_cmd *tmp);
 
 #endif

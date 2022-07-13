@@ -6,7 +6,7 @@
 /*   By: ssawane <ssawane@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/06 16:21:59 by ssawane           #+#    #+#             */
-/*   Updated: 2022/07/12 15:13:51 by ssawane          ###   ########.fr       */
+/*   Updated: 2022/07/13 16:01:54 by ssawane          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,20 +81,20 @@ int	isempty_line(char *line)
 	if (line[i] == '\0')
 		return (1);
 	i = 0;
-	// while (line[i] == 34 || line[i] == 39
-	// 	|| line[i] == '$' || line[i] == ' ')
-	// 		i++;
-	// if (line[i] == '\0')
-	// {
-	// 	write(2, "minishell: : command not found\n", 31);
-	// 	return (1);
-	// }
 	return (0);
 }
 
 int	main_parsing(void)
 {
+	if (shl.exit != -1)
+			finish_free();
 	signals_proc();
+	shl.line = readline("minishell>$ ");
+	if (!shl.line)
+	{
+		shl.exit = 0;
+		finish_free();
+	}
 	adding_history();
 	if (isempty_line(shl.line) || spaces_adding()
 		|| spaces_changing())

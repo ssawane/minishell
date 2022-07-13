@@ -6,7 +6,7 @@
 /*   By: ssawane <ssawane@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/12 20:50:04 by ssawane           #+#    #+#             */
-/*   Updated: 2022/07/12 23:28:10 by ssawane          ###   ########.fr       */
+/*   Updated: 2022/07/13 18:36:19 by ssawane          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,4 +94,6 @@ void	isbuildin(t_cmd *cmd)
 				execute(cmd);
 		}
 	}
+	else
+		execute(cmd);
 }
