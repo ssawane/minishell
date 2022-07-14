@@ -6,7 +6,7 @@
 /*   By: ssawane <ssawane@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/01 17:02:34 by ssawane           #+#    #+#             */
-/*   Updated: 2022/07/13 16:28:58 by ssawane          ###   ########.fr       */
+/*   Updated: 2022/07/13 22:56:27 by ssawane          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,6 +72,30 @@ void	local_env(char **envp)
 	}
 }
 
+void	shlvl_up(void)
+{
+	int		def;
+	char	*tmp;
+	int		i;
+
+	i = 0;
+	while (!ft_strnstr(shl.envv[i], "SHLVL=", 6))
+		if (!shl.envv[++i])
+		{
+			write(2, "error: no shlvl\n", 16);
+			return;
+		}
+	tmp = ft_substr(shl.envv[i], 6, ft_strlen(shl.envv[i]) - 5);
+	free(shl.envv[i]);
+	def = ft_atoi(tmp) + 1;
+	if (def == 1000)
+		def = 0;
+	free(tmp);
+	tmp = ft_itoa(def);
+	shl.envv[i] = ft_strjoin("SHLVL=", tmp);
+	free(tmp);
+}
+
 void	shell_init(char **envp)
 {
 	shl.line = NULL;
@@ -83,7 +107,7 @@ void	shell_init(char **envp)
 	shl.fdp = 0;
 	shl.exit = -1;
 	local_env(envp);
-	// shllvl_up();
+	shlvl_up();
 }
 
 int	main(int ac, char **av, char **envp)

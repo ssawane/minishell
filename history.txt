@@ -1586,3 +1586,25 @@ cjk
 cat
 cat
 
+env
+exit
+env
+./minishell 
+env
+./minishell 
+env
+env
+./minishell 
+env
+exit
+lkjsdf
+cat
+
+env
+./minishell 
+env
+
+echo $hfkdghldf$PWD
+ls lskdgjdhgisdoigjiredg
+exit
+exit
