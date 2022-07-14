@@ -6,7 +6,7 @@
 /*   By: ssawane <ssawane@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/05 13:26:14 by ssawane           #+#    #+#             */
-/*   Updated: 2022/07/13 11:39:21 by ssawane          ###   ########.fr       */
+/*   Updated: 2022/07/14 15:54:40 by ssawane          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,20 @@ void	free_paths(void)
 	int	i;
 
 	i = -1;
-	while (shl.paths[++i])
-		free(shl.paths[i]);
-	free(shl.paths);
+	while (g_b.paths[++i])
+		free(g_b.paths[i]);
+	free(g_b.paths);
 }
 
-char	**paths_pars(char **envp)
+void	empty_paths_err(char *str)
+{
+	write(2, "minishell: ", 11);
+	write(2, str, ft_strlen(str));
+	write(2, ": No such file or directory\n", 28);
+	exit(127);
+}
+
+char	**paths_pars(char **envp, char *str)
 {
 	char	*path_envp;
 	char	**paths;
@@ -30,13 +38,8 @@ char	**paths_pars(char **envp)
 
 	i = 0;
 	while (ft_strnstr(envp[i], "PATH=", 5) == NULL)
-	{
 		if (envp[++i] == NULL)
-		{
-			write(2, "error: unset path\n", 18);
-			exit(127);
-		}
-	}
+			empty_paths_err(str);
 	path_envp = ft_substr(envp[i], 5, ft_strlen(envp[i]) - 4);
 	paths = ft_split(path_envp, ':');
 	free(path_envp);
@@ -56,14 +59,14 @@ void	execute(t_cmd *cmd)
 	char	*cmd_final;
 
 	i = -1;
-	shl.paths = paths_pars(shl.envv);
+	g_b.paths = paths_pars(g_b.envv, cmd->oper[0]);
 	if (!access(cmd->oper[0], X_OK))
-		execve(cmd->oper[0], cmd->oper, shl.envv);
-	while (shl.paths[++i])
+		execve(cmd->oper[0], cmd->oper, g_b.envv);
+	while (g_b.paths[++i])
 	{
-		cmd_final = ft_strjoin(shl.paths[i], cmd->oper[0]);
+		cmd_final = ft_strjoin(g_b.paths[i], cmd->oper[0]);
 		if (!access(cmd_final, X_OK))
-			execve(cmd_final, cmd->oper, shl.envv);
+			execve(cmd_final, cmd->oper, g_b.envv);
 		free(cmd_final);
 	}
 	write(2, "minishell: ", 11);
@@ -72,4 +75,3 @@ void	execute(t_cmd *cmd)
 	free_paths();
 	exit (127);
 }
-

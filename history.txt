@@ -1608,3 +1608,184 @@ echo $hfkdghldf$PWD
 ls lskdgjdhgisdoigjiredg
 exit
 exit
+env
+./minishell 
+env
+exit
+exit
+env
+./minishell 
+env
+exit
+exit
+./minishell 
+sdfsdf
+sdfsdfsdf
+env
+exit
+exit
+env
+unset USER
+env
+unset USER
+env
+exit
+unset USER
+env
+unset SHELL
+env
+exit
+env
+clear
+enc | env
+env | env
+enc | env
+enc | env
+enc | env
+enc | env
+enc | env
+enc | env
+enc | env
+enc | env
+enc | env
+enc | env
+enc | env
+enc | env
+encsd | env
+encsd | env
+encsd | env
+encsd | env
+encsd | env
+encsd | env
+encsd | env
+encsd | env
+encsd | env
+encsd | env
+encsd | env
+encsd | env
+encsd | env
+encsd | env
+encsd | env
+encsd | env
+encsd | env
+encsd | env
+encsd | env
+encsd | env
+encsd | env
+encsd | env
+encsd | env
+encsd | env
+encsd | env
+encsd | env
+encsd | env
+encsd | env
+encsd | env
+encsd | env
+encsd | env
+encsd | env
+encsd | env
+encsd | env
+encsd | env
+encsd | env | dsf
+ls | echo 123
+cd .. | ls
+ls
+ls | pwd
+ls | cd ..
+ls
+    env
+exitt
+exit
+exit
+env
+unset PATH
+env
+ls
+$?
+dsf
+$USER
+exit
+unset $PATH
+unset PATH
+env
+$?
+$?
+cat
+unset sdkfjh
+jsdf
+cat
+j
+unset path
+unset PATH
+sdjfh
+exit
+unset sdlkfj
+unset 23d
+unset sdkjfh
+exit
+unset sdkhf
+env
+unset USER
+env
+./minishell 
+env
+exit
+exit
+env
+unset PATH
+skds
+cat
+$?
+exit
+fdgdfg
+$jkhsdf\
+$USER
+env
+unset USER
+env
+unset KJHF
+env
+exit
+env
+exit
+make clean
+exit
+grge
+make clean
+exit
+dfgdfg
+34t3
+exit
+lkdjfg
+sdfklj
+cat t1
+cat t2
+sdfklj | dfkugh
+exit dfh
+exit 45 45
+exit 45 | 45
+exit 45 | exit
+exit
+dfdfg
+dfdfg | ls
+make clean
+unset
+env
+unset _
+env
+exit
+env
+unset _
+env
+unset TERM
+env
+unset USER
+env
+unset LANG
+env
+unset TERM
+env
+env
+unset GIT_ASKPASS
+env
+exit

@@ -6,7 +6,7 @@
 /*   By: ssawane <ssawane@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/08 15:54:59 by ssawane           #+#    #+#             */
-/*   Updated: 2022/07/13 12:54:28 by ssawane          ###   ########.fr       */
+/*   Updated: 2022/07/14 15:47:41 by ssawane          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,7 @@ t_cmd	*cmd_cells_convert(void)
 	t_cmd	*nodes;
 	t_cmd	*unit;
 
-	t = shl.cells;
+	t = g_b.cells;
 	unit = ft_cmdnew();
 	nodes = unit;
 	while (t != NULL)
@@ -83,5 +83,5 @@ t_cmd	*cmd_cells_convert(void)
 		t = m;
 		t = cmd_cells_cont(t, &unit, &nodes);
 	}
-	return(nodes);
+	return (nodes);
 }

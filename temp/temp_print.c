@@ -6,7 +6,7 @@
 /*   By: ssawane <ssawane@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/08 11:15:38 by ssawane           #+#    #+#             */
-/*   Updated: 2022/07/07 11:04:43 by ssawane          ###   ########.fr       */
+/*   Updated: 2022/07/14 15:55:11 by ssawane          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,11 @@
 void	print(void)
 {
 	int	i = -1;
-	printf("line: %s\n", shl.line);
-	if (shl.words)
+	printf("line: %s\n", g_b.line);
+	if (g_b.words)
 	{
-		while (shl.words[++i])
-			printf("%s\n", shl.words[i]);
+		while (g_b.words[++i])
+			printf("%s\n", g_b.words[i]);
 	}
 	else
 		printf("%s\n", "nowords");
@@ -29,7 +29,7 @@ void	print2()
 {
 	t_cell	*tmp;
 	
-	tmp = shl.cells;
+	tmp = g_b.cells;
 	while (tmp != NULL)
 	{
 		printf("%s\n", tmp->word);
@@ -43,7 +43,7 @@ void	print3()
 	t_cmd	*tmp;
 	int		i;
 
-	tmp = shl.cmds;
+	tmp = g_b.cmds;
 	while (tmp != NULL)
 	{
 		printf("in: %d\n", tmp->in);

@@ -6,21 +6,11 @@
 /*   By: ssawane <ssawane@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/16 11:13:34 by ssawane           #+#    #+#             */
-/*   Updated: 2022/07/12 16:13:30 by ssawane          ###   ########.fr       */
+/*   Updated: 2022/07/14 15:51:41 by ssawane          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/minishell.h"
-
-int	pointer(int t)
-{
-	int	p;
-
-	p = t - 2;
-	if (p < 0)
-		p = -1;
-	return (p);
-}
 
 char	*quot_del(char *str, int *start, int symb)
 {
@@ -57,12 +47,12 @@ char	*word_from_env2(char *toenv)
 
 	i = -1;
 	fromenv = NULL;
-	while (shl.envv[++i])
+	while (g_b.envv[++i])
 	{
-		if (!ft_strncmp(shl.envv[i], toenv, ft_strlen(toenv)))
+		if (!ft_strncmp(g_b.envv[i], toenv, ft_strlen(toenv)))
 		{
-			fromenv = ft_substr(shl.envv[i], ft_strlen(toenv),
-					ft_strlen(shl.envv[i]) - ft_strlen(toenv));
+			fromenv = ft_substr(g_b.envv[i], ft_strlen(toenv),
+					ft_strlen(g_b.envv[i]) - ft_strlen(toenv));
 			break ;
 		}
 	}
@@ -83,7 +73,7 @@ char	*word_from_env(char *str, int k, int j)
 	toenv[i++] = '=';
 	toenv[i] = '\0';
 	if (!ft_strcmp(toenv, "?="))
-		fromenv = ft_itoa(shl.exit_code);
+		fromenv = ft_itoa(g_b.exit_code);
 	else
 		fromenv = word_from_env2(toenv);
 	free(toenv);
@@ -117,64 +107,28 @@ char	*add_fromenv(char *str, int k, int *j)
 
 void	quot_correct(void)
 {
-	shl.t1 = shl.cells;
-	while (shl.t1)
+	g_b.t1 = g_b.cells;
+	while (g_b.t1)
 	{
-		shl.i = 0;
-		while (shl.t1->word[shl.i])
+		g_b.i = 0;
+		while (g_b.t1->word[g_b.i])
 		{
-			if (shl.t1->word[shl.i] == '$')
-				shl.t1->word = dollar(shl.t1->word, &(shl.i), 0);
-			else if (shl.t1->word[shl.i] == 34 || shl.t1->word[shl.i] == 39)
+			if (g_b.t1->word[g_b.i] == '$')
+				g_b.t1->word = dollar(g_b.t1->word, &(g_b.i), 0);
+			else if (g_b.t1->word[g_b.i] == 34 || g_b.t1->word[g_b.i] == 39)
 			{
-				if (shl.t1->word[shl.i] == 34)
+				if (g_b.t1->word[g_b.i] == 34)
 				{
-					if (!dollar_check(shl.t1->word, shl.i))
-						shl.t1->word = quot_del(shl.t1->word, &(shl.i), 34);
+					if (!dollar_check(g_b.t1->word, g_b.i))
+						g_b.t1->word = quot_del(g_b.t1->word, &(g_b.i), 34);
 					else
-						shl.t1->word = dollar(shl.t1->word, &(shl.i), 1);
+						g_b.t1->word = dollar(g_b.t1->word, &(g_b.i), 1);
 				}
-				else if (shl.t1->word[shl.i] == 39)
-					shl.t1->word = quot_del(shl.t1->word, &(shl.i), 39);
+				else if (g_b.t1->word[g_b.i] == 39)
+					g_b.t1->word = quot_del(g_b.t1->word, &(g_b.i), 39);
 			}
-			shl.i++;
+			g_b.i++;
 		}
-		shl.t1 = shl.t1->next;
+		g_b.t1 = g_b.t1->next;
 	}
 }
-
-// void	quot_correct(void)
-// {
-// 	shl.t1 = shl.cells;
-// 	while (shl.t1)
-// 	{
-// 		shl.i = 0;
-// 		while (shl.t1->word[shl.i])
-// 		{
-// 			printf("shl.t1->word[shl.i]1: %c\n", shl.t1->word[shl.i]);
-// 			printf("shl.i1: %d\n", shl.i);
-// 			if (shl.t1->word[shl.i] == '$')
-// 				shl.t1->word = dollar(shl.t1->word, &(shl.i), 0);
-// 			else if (shl.t1->word[shl.i] == 34 || shl.t1->word[shl.i] == 39)
-// 			{
-// 				if (shl.t1->word[shl.i] == 34)
-// 				{
-// 					if (!dollar_check(shl.t1->word, shl.i))
-// 						shl.t1->word = quot_del(shl.t1->word, &(shl.i), 34);
-// 					else
-// 						shl.t1->word = dollar(shl.t1->word, &(shl.i), 1);
-// 				}
-// 				else if (shl.t1->word[shl.i] == 39) 
-// 					shl.t1->word = quot_del(shl.t1->word, &(shl.i), 39);
-// 			}
-// 			printf("shl.t1->word2: %s\n", shl.t1->word);
-// 			printf("strlen: %d\n", ft_strlen(shl.t1->word));
-// 			printf("shl.t1->word[shl.i]2: %c\n", shl.t1->word[shl.i]);
-// 			printf("shl.i2: %d\n\n", shl.i);
-// 			shl.i++;
-// 		}
-// 		shl.t1 = shl.t1->next;
-// 	}
-// 	printf("shl.i232: %d\n\n", shl.i);
-// }
-

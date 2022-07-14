@@ -6,7 +6,7 @@
 /*   By: ssawane <ssawane@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/08 11:14:38 by ssawane           #+#    #+#             */
-/*   Updated: 2022/07/03 12:40:56 by ssawane          ###   ########.fr       */
+/*   Updated: 2022/07/14 15:53:48 by ssawane          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,22 +23,22 @@ int	quotes_check1(void)
 	int	i;
 
 	i = -1;
-	while (shl.line[++i])
+	while (g_b.line[++i])
 	{
-		if (shl.line[i] == 34)
+		if (g_b.line[i] == 34)
 		{
 			i++;
-			while (shl.line[i] && shl.line[i] != 34)
+			while (g_b.line[i] && g_b.line[i] != 34)
 				i++;
-			if (shl.line[i] == '\0')
+			if (g_b.line[i] == '\0')
 				return (syntax_error_mes());
 		}
-		else if (shl.line[i] == 39)
+		else if (g_b.line[i] == 39)
 		{
 			i++;
-			while (shl.line[i] && shl.line[i] != 39)
+			while (g_b.line[i] && g_b.line[i] != 39)
 				i++;
-			if (shl.line[i] == '\0')
+			if (g_b.line[i] == '\0')
 				return (syntax_error_mes());
 		}
 	}
@@ -52,20 +52,20 @@ int	quotes_check2(void)
 
 	i = -1;
 	flag = 0;
-	while (shl.line[++i])
+	while (g_b.line[++i])
 	{
-		if (shl.line[i] == 34)
+		if (g_b.line[i] == 34)
 		{
-			while (shl.line[i] && shl.line[i] != 34)
+			while (g_b.line[i] && g_b.line[i] != 34)
 			{
-				if (shl.line[i++] == 39)
+				if (g_b.line[i++] == 39)
 					flag = 1;
 			}
-			while (shl.line[i])
+			while (g_b.line[i])
 			{
-				if (shl.line[i++] == 34)
+				if (g_b.line[i++] == 34)
 					flag = 0;
-				if (shl.line[i] == 39 && flag == 1)
+				if (g_b.line[i] == 39 && flag == 1)
 					return (syntax_error_mes());
 			}
 		}
@@ -80,20 +80,20 @@ int	quotes_check3(void)
 
 	i = -1;
 	flag = 0;
-	while (shl.line[++i])
+	while (g_b.line[++i])
 	{
-		if (shl.line[i] == 39)
+		if (g_b.line[i] == 39)
 		{
-			while (shl.line[i] && shl.line[i] != 39)
+			while (g_b.line[i] && g_b.line[i] != 39)
 			{
-				if (shl.line[i++] == 34)
+				if (g_b.line[i++] == 34)
 					flag = 1;
 			}
-			while (shl.line[i])
+			while (g_b.line[i])
 			{
-				if (shl.line[i++] == 39)
+				if (g_b.line[i++] == 39)
 					flag = 0;
-				if (shl.line[i] == 34 && flag == 1)
+				if (g_b.line[i] == 34 && flag == 1)
 					return (syntax_error_mes());
 			}
 		}
@@ -108,24 +108,24 @@ int	spaces_changing(void)
 	i = -1;
 	if (quotes_check1() || quotes_check2() || quotes_check3())
 		return (1);
-	while (shl.line[++i])
+	while (g_b.line[++i])
 	{
-		if (shl.line[i] == 34)
+		if (g_b.line[i] == 34)
 		{
 			i++;
-			if (shl.line[i] != 34)
-				while (shl.line[i] != 34)
+			if (g_b.line[i] != 34)
+				while (g_b.line[i] != 34)
 					i++;
 		}
-		else if (shl.line[i] == 39)
+		else if (g_b.line[i] == 39)
 		{
 			i++;
-			if (shl.line[i] != 39)
-				while (shl.line[i] != 39)
+			if (g_b.line[i] != 39)
+				while (g_b.line[i] != 39)
 					i++;
 		}
-		else if (shl.line[i] == ' ')
-			shl.line[i] = '\n';
+		else if (g_b.line[i] == ' ')
+			g_b.line[i] = '\n';
 	}
 	return (0);
 }

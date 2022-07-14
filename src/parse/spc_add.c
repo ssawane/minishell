@@ -6,7 +6,7 @@
 /*   By: ssawane <ssawane@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/03 12:37:27 by ssawane           #+#    #+#             */
-/*   Updated: 2022/07/03 12:40:08 by ssawane          ###   ########.fr       */
+/*   Updated: 2022/07/14 15:52:39 by ssawane          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,7 @@ void	spaces_adding_step2(int *j, int *i, char *tmp)
 {
 	tmp[*j] = ' ';
 	*j += 1;
-	tmp[*j] = shl.line[*i];
+	tmp[*j] = g_b.line[*i];
 	*j += 1;
 	*i += 1;
 	tmp[*j] = ' ';
@@ -83,12 +83,12 @@ void	spaces_adding_step3(int *j, int *i, char symb, char *tmp)
 {
 	tmp[*j] = ' ';
 	*j += 1;
-	tmp[*j] = shl.line[*i];
+	tmp[*j] = g_b.line[*i];
 	*j += 1;
 	*i += 1;
-	if (shl.line[*i] == symb)
+	if (g_b.line[*i] == symb)
 	{
-		tmp[*j] = shl.line[*i];
+		tmp[*j] = g_b.line[*i];
 		*j += 1;
 		*i += 1;
 	}
@@ -104,23 +104,23 @@ int	spaces_adding(void)
 
 	i = 0;
 	j = 0;
-	if (rdirects(shl.line) > 0)
+	if (rdirects(g_b.line) > 0)
 	{
-		tmp = malloc(sizeof(char *) * (ft_strlen(shl.line)
-					+ (rdirects(shl.line) * 2)));
-		while (shl.line[i])
+		tmp = malloc(sizeof(char *) * (ft_strlen(g_b.line)
+					+ (rdirects(g_b.line) * 2)));
+		while (g_b.line[i])
 		{
-			if (shl.line[i] == '|' && !isquoted(shl.line, i, j))
+			if (g_b.line[i] == '|' && !isquoted(g_b.line, i, j))
 				spaces_adding_step2(&j, &i, tmp);
-			else if (!isquoted(shl.line, i, j) && (shl.line[i] == '<'
-					|| shl.line[i] == '>'))
-				spaces_adding_step3(&j, &i, shl.line[i], tmp);
+			else if (!isquoted(g_b.line, i, j) && (g_b.line[i] == '<'
+					|| g_b.line[i] == '>'))
+				spaces_adding_step3(&j, &i, g_b.line[i], tmp);
 			else
-				tmp[j++] = shl.line[i++];
+				tmp[j++] = g_b.line[i++];
 		}
 		tmp[j] = '\0';
-		free(shl.line);
-		shl.line = tmp;
+		free(g_b.line);
+		g_b.line = tmp;
 	}
 	return (0);
 }

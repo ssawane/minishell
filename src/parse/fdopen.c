@@ -6,11 +6,21 @@
 /*   By: ssawane <ssawane@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/14 11:27:19 by ssawane           #+#    #+#             */
-/*   Updated: 2022/07/13 18:55:37 by ssawane          ###   ########.fr       */
+/*   Updated: 2022/07/14 15:48:46 by ssawane          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/minishell.h"
+
+int	pointer(int t)
+{
+	int	p;
+
+	p = t - 2;
+	if (p < 0)
+		p = -1;
+	return (p);
+}
 
 void	heredoc_next(t_cmd *cmd, char *res, char *line)
 {
@@ -58,7 +68,7 @@ void	open_read(t_cell *cell, t_cmd *cmd)
 	if (access(cell->word, F_OK) == -1 || access(cell->word, R_OK) == -1)
 	{
 		perror("minishell: infile error");
-		shl.close = 1;
+		g_b.close = 1;
 	}
 	else
 	{
@@ -66,7 +76,7 @@ void	open_read(t_cell *cell, t_cmd *cmd)
 		if (cmd->in == -1)
 		{
 			perror("minishell: infile error");
-			shl.close = 1;
+			g_b.close = 1;
 		}
 	}
 }
@@ -92,7 +102,7 @@ void	redir_proc(t_cell *cell, t_cmd *cmd)
 		if (cmd->out == -1)
 		{
 			perror("minishell: outfile error");
-			shl.close = 1;
+			g_b.close = 1;
 		}
 		t->type = 0;
 	}

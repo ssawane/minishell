@@ -6,7 +6,7 @@
 /*   By: ssawane <ssawane@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/12 20:50:04 by ssawane           #+#    #+#             */
-/*   Updated: 2022/07/13 18:36:19 by ssawane          ###   ########.fr       */
+/*   Updated: 2022/07/14 15:41:17 by ssawane          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int	digscheck(char *str)
 	return (0);
 }
 
-void	exit_pr(t_cmd *cmd)
+void	exit_pr_child(t_cmd *cmd)
 {
 	if (!cmd->oper[1])
 		exit(0);
@@ -56,9 +56,9 @@ void	env_pr(void)
 	int	i;
 
 	i = -1;
-	while (shl.envv[++i])
+	while (g_b.envv[++i])
 	{
-		write(1, shl.envv[i], ft_strlen(shl.envv[i]));
+		write(1, g_b.envv[i], ft_strlen(g_b.envv[i]));
 		write(1, "\n", 1);
 	}
 	exit (0);
@@ -70,26 +70,26 @@ void	echo_pr(t_cmd *cmd)
 	exit(0);
 }
 
-void	isbuildin(t_cmd *cmd)
+void	builtins_child(t_cmd *cmd)
 {
 	if (cmd->oper)
 	{
 		if (cmd->oper[0])
 		{
-			if (!ft_strcmp(cmd->oper[0], "echo"))
+			if (!ft_strcmp(cmd->oper[0], "echo1"))
 				echo_pr(cmd);
-			// else if (!ft_strcmp(cmd->oper[0], "cd"))
-			// 	cd_pr(cmd);
-			// else if (!ft_strcmp(cmd->oper[0], "pwd"))
-			// 	pwd_pr(cmd);
-			// else if (!ft_strcmp(cmd->oper[0], "export"))
-			// 	export_pr(cmd);
-			// else if (!ft_strcmp(cmd->oper[0], "unset"))
-			// 	unset_pr(cmd);
+			else if (!ft_strcmp(cmd->oper[0], "cd"))
+				exit(0);
+			else if (!ft_strcmp(cmd->oper[0], "pwd"))
+				exit(0);
+			else if (!ft_strcmp(cmd->oper[0], "export"))
+				exit(0);
+			else if (!ft_strcmp(cmd->oper[0], "unset"))
+				exit(0);
 			else if (!ft_strcmp(cmd->oper[0], "env"))
 				env_pr();
 			else if (!ft_strcmp(cmd->oper[0], "exit"))
-				exit_pr(cmd);
+				exit_pr_child(cmd);
 			else
 				execute(cmd);
 		}

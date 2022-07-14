@@ -6,7 +6,7 @@
 /*   By: ssawane <ssawane@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/06 16:21:59 by ssawane           #+#    #+#             */
-/*   Updated: 2022/07/13 16:01:54 by ssawane          ###   ########.fr       */
+/*   Updated: 2022/07/14 15:50:03 by ssawane          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,18 +19,18 @@ t_cell	*cell_words_convert(void)
 	t_cell	*unit;
 
 	i = 1;
-	nodes = ft_cellnew(shl.words[0]);
-	while (shl.words[i])
+	nodes = ft_cellnew(g_b.words[0]);
+	while (g_b.words[i])
 	{
-		unit = ft_cellnew(shl.words[i]);
+		unit = ft_cellnew(g_b.words[i]);
 		ft_celladd_back(&nodes, unit);
 		i++;
 	}
 	i = -1;
-	while (shl.words[++i])
-		free(shl.words[i]);
-	free(shl.words);
-	shl.words = NULL;
+	while (g_b.words[++i])
+		free(g_b.words[i]);
+	free(g_b.words);
+	g_b.words = NULL;
 	return (nodes);
 }
 
@@ -38,7 +38,7 @@ int	syntax_errors_check(void)
 {
 	t_cell	*tmp;
 
-	tmp = shl.cells;
+	tmp = g_b.cells;
 	while (tmp)
 	{
 		if (tmp->type == 2 && !ft_strcmp(tmp->word, "<"))
@@ -59,14 +59,14 @@ void	adding_history(void)
 {
 	int	fd;
 
-	add_history(shl.line);
+	add_history(g_b.line);
 	fd = open("history.txt", O_CREAT | O_WRONLY | O_APPEND, 0644);
 	if (fd == -1)
 	{
 		perror("minishell: cannot open history file");
 		exit(0);
 	}
-	write(fd, shl.line, ft_strlen(shl.line));
+	write(fd, g_b.line, ft_strlen(g_b.line));
 	write(fd, "\n", 1);
 	close(fd);
 }
@@ -86,26 +86,26 @@ int	isempty_line(char *line)
 
 int	main_parsing(void)
 {
-	if (shl.exit != -1)
-			finish_free();
+	if (g_b.exit != -1)
+		finish_free();
 	signals_proc();
-	shl.line = readline("minishell>$ ");
-	if (!shl.line)
+	g_b.line = readline("minishell>$ ");
+	if (!g_b.line)
 	{
-		shl.exit = 0;
+		g_b.exit = 0;
 		finish_free();
 	}
 	adding_history();
-	if (isempty_line(shl.line) || spaces_adding()
+	if (isempty_line(g_b.line) || spaces_adding()
 		|| spaces_changing())
 		return (1);
-	shl.words = ft_split(shl.line, '\n');
-	shl.cells = cell_words_convert();
+	g_b.words = ft_split(g_b.line, '\n');
+	g_b.cells = cell_words_convert();
 	if (syntax_errors_check())
 		return (1);
 	quot_correct();
-	shl.cmds = cmd_cells_convert();
-	if (shl.close == 1)
+	g_b.cmds = cmd_cells_convert();
+	if (g_b.close == 1)
 		return (1);
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: ssawane <ssawane@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/06 17:27:19 by ssawane           #+#    #+#             */
-/*   Updated: 2022/07/13 18:55:40 by ssawane          ###   ########.fr       */
+/*   Updated: 2022/07/14 15:59:42 by ssawane          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,6 @@
 # include "../libft/libft.h"
 # include <readline/readline.h>
 # include <readline/history.h>
-# include <sys/types.h> // check
-# include <sys/stat.h> // check
 # include <sys/wait.h>
 # include <fcntl.h>
 
@@ -32,7 +30,7 @@ typedef struct s_cell {
 }	t_cell;
 
 typedef struct s_cmd {
-	int				in; 
+	int				in;
 	int				out;
 	int				pfd[2];
 	char			**oper;
@@ -45,9 +43,8 @@ typedef struct s_shl {
 	int		envnum;
 	int		pipes;
 	int		close;
-	int		*pids;
-	int		**fdp;
 	int		exit_code;
+	int		*pids;
 	char	*line;
 	char	**words;
 	char	**envv;
@@ -55,17 +52,19 @@ typedef struct s_shl {
 	t_cell	*cells;
 	t_cell	*t1;
 	t_cmd	*cmds;
-	t_cmd	*cmds2;
 }	t_shl;
 
-extern t_shl	shl;
+extern t_shl	g_b;
 
 //libft
-int		ft_strcmp(const char *s1, const char *s2);
-void	ft_celladd_back(t_cell **cell, t_cell *new);
-void	ft_cmdadd_back(t_cmd **cmd, t_cmd *new);
 t_cell	*ft_cellnew(char *content);
 t_cmd	*ft_cmdnew(void);
+void	ft_celladd_back(t_cell **cell, t_cell *new);
+void	ft_cmdadd_back(t_cmd **cmd, t_cmd *new);
+int		ft_strcmp(const char *s1, const char *s2);
+
+//preparsing
+void	shell_init(char **envp);
 
 //parsing
 t_cmd	*cmd_cells_convert(void);
@@ -78,15 +77,17 @@ int		spaces_adding(void);
 int		syntax_error_mes(void);
 int		main_parsing(void);
 int		dollar_check(char *word, int i);
+int		pointer(int t);
 
 //execute
 void	main_exe(void);
-char	**paths_pars(char **envp);
 void	execute(t_cmd *cmd);
+void	pipes_check(void);
 void	free_paths(void);
-void	isbuildin(t_cmd *cmd);
-int		digscheck(char *str);
+void	builtins_parent(void);
+void	builtins_child(t_cmd *cmd);
 void	finish_free(void);
+int		digscheck(char *str);
 
 //signals
 void	signals_proc(void);
