@@ -6,11 +6,24 @@
 /*   By: ssawane <ssawane@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/05 13:26:14 by ssawane           #+#    #+#             */
-/*   Updated: 2022/07/14 15:54:40 by ssawane          ###   ########.fr       */
+/*   Updated: 2022/07/15 12:09:02 by ssawane          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/minishell.h"
+
+void	pipes_check(void)
+{
+	t_cmd	*tmp;
+
+	tmp = g_b.cmds;
+	g_b.pipes = -1;
+	while (tmp)
+	{
+		g_b.pipes++;
+		tmp = tmp->next;
+	}
+}
 
 void	free_paths(void)
 {

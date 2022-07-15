@@ -6,7 +6,7 @@
 /*   By: ssawane <ssawane@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/06 11:17:57 by ssawane           #+#    #+#             */
-/*   Updated: 2022/07/14 15:20:39 by ssawane          ###   ########.fr       */
+/*   Updated: 2022/07/14 19:11:45 by ssawane          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ void	sighandler(int sig)
 	rl_redisplay();
 	write(1, "  \n", 3);
 	rl_on_new_line();
-	rl_replace_line("", 0);
+	// rl_replace_line("", 0);
 	rl_redisplay();
 }
 

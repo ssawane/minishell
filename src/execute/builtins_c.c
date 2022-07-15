@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   buildin.c                                          :+:      :+:    :+:   */
+/*   builtins_c.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ssawane <ssawane@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/12 20:50:04 by ssawane           #+#    #+#             */
-/*   Updated: 2022/07/14 15:41:17 by ssawane          ###   ########.fr       */
+/*   Updated: 2022/07/15 12:13:34 by ssawane          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,7 @@ void	builtins_child(t_cmd *cmd)
 	{
 		if (cmd->oper[0])
 		{
-			if (!ft_strcmp(cmd->oper[0], "echo1"))
+			if (!ft_strcmp(cmd->oper[0], "echo1")) // echo
 				echo_pr(cmd);
 			else if (!ft_strcmp(cmd->oper[0], "cd"))
 				exit(0);

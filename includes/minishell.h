@@ -6,7 +6,7 @@
 /*   By: ssawane <ssawane@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/06 17:27:19 by ssawane           #+#    #+#             */
-/*   Updated: 2022/07/14 15:59:42 by ssawane          ###   ########.fr       */
+/*   Updated: 2022/07/15 12:18:15 by ssawane          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,7 +92,6 @@ int		digscheck(char *str);
 //signals
 void	signals_proc(void);
 void	inside_pr(int signum);
-void	inside_heredoc(int signum);
 
 //temp
 void	print(void);

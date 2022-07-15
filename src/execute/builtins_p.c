@@ -6,24 +6,11 @@
 /*   By: ssawane <ssawane@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/14 14:18:21 by ssawane           #+#    #+#             */
-/*   Updated: 2022/07/14 16:45:52 by ssawane          ###   ########.fr       */
+/*   Updated: 2022/07/15 12:14:28 by ssawane          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/minishell.h"
-
-void	pipes_check(void)
-{
-	t_cmd	*tmp;
-
-	tmp = g_b.cmds;
-	g_b.pipes = -1;
-	while (tmp)
-	{
-		g_b.pipes++;
-		tmp = tmp->next;
-	}
-}
 
 void	exit_pr_parent(void)
 {
@@ -41,22 +28,24 @@ void	exit_pr_parent(void)
 void	unset_pr(void)
 {
 	int		i;
+	char	*tmp;
 
 	i = 0;
-	if (g_b.cmds->oper[1])
+	if (g_b.cmds->oper[1] && ft_strcmp(g_b.cmds->oper[1], "_"))
 	{
+		tmp = ft_strjoin(g_b.cmds->oper[1], "=");
 		while (g_b.envv[i] && !ft_strnstr(g_b.envv[i],
-				g_b.cmds->oper[1], ft_strlen(g_b.cmds->oper[1])))
+				tmp, ft_strlen(tmp)))
 			i++;
+		free(tmp);
 		if (g_b.envv[i])
 		{
+			free(g_b.envv[i]);
 			while (g_b.envv[i + 1])
 			{
-				free(g_b.envv[i]);
-				g_b.envv[i] = ft_strdup(g_b.envv[i + 1]);
+				g_b.envv[i] = g_b.envv[i + 1];
 				i++;
 			}
-			free(g_b.envv[i]);
 			g_b.envv[i] = NULL;
 		}
 	}
@@ -67,7 +56,7 @@ void	builtins_parent(void)
 	if (g_b.pipes == 0 && g_b.cmds->oper && g_b.cmds->oper[0])
 	{
 		if (!ft_strcmp(g_b.cmds->oper[0], "cd"))
-			return ;
+			return ; // func
 		// else if (!ft_strcmp(shl.cmds->oper[0], "pwd"))
 		// 	pwd_pr(cmd);
 		// else if (!ft_strcmp(shl.cmds->oper[0], "export"))
