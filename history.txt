@@ -603,3 +603,10 @@ env
 export akjlhdfg
 export
 exit
+export USER=sdklfj
+exit
+USER=sdfjh4
+export USER=sdfjh4
+export
+env
+exit

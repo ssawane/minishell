@@ -6,7 +6,7 @@
 /*   By: ssawane <ssawane@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/05 12:43:38 by tandrea           #+#    #+#             */
-/*   Updated: 2022/07/19 21:33:05 by ssawane          ###   ########.fr       */
+/*   Updated: 2022/07/19 22:05:21 by ssawane          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@ int	arg_exist(char **en, char *str, int j)
 	char	*tmp;
 
 	i = 0;
-	tmp = ft_substr(str, 0, j);
-	while (en[i] && ft_strnstr(en[i], tmp, j) == NULL)
+	tmp = ft_substr(str, 0, j + 1);
+	while (en[i] && ft_strnstr(en[i], tmp, j + 1) == NULL)
 		i++;
 	free(tmp);
 	if (en[i] != NULL)
