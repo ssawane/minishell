@@ -6,7 +6,7 @@
 #    By: ssawane <ssawane@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/01 16:28:48 by ssawane           #+#    #+#              #
-#    Updated: 2022/07/15 12:11:46 by ssawane          ###   ########.fr        #
+#    Updated: 2022/07/19 21:17:29 by ssawane          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ LFT_DR	=	src/libft_mod/
 PRS_DR	=	src/parse/
 EXE_DR	=	src/execute/
 MAIN	=	minishell signals init
-EXECUTE	=	execute paths_exe builtins_p builtins_c
+EXECUTE	=	execute paths_exe builtins_p builtins_c ft_pwd ft_export ft_export2 
 LIBMOD	=	celllst cmdlst
 PARSE	=	cmdtolist fdopen spc_add spc_change parsing quot_corr dollar_corr
 SRCS	=	$(addsuffix .c, $(addprefix $(MN_DR), $(MAIN)))\

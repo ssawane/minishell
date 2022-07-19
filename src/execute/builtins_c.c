@@ -6,7 +6,7 @@
 /*   By: ssawane <ssawane@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/12 20:50:04 by ssawane           #+#    #+#             */
-/*   Updated: 2022/07/15 12:13:34 by ssawane          ###   ########.fr       */
+/*   Updated: 2022/07/19 21:22:27 by ssawane          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,9 +64,29 @@ void	env_pr(void)
 	exit (0);
 }
 
-void	echo_pr(t_cmd *cmd)
+void	echo_pr(t_cmd *com)
 {
-	printf("echo here: %s\n", cmd->oper[0]);
+	int	fd;
+	int	i;
+
+	fd = 1;
+	i = 1;
+	ft_check_builtin(&fd);
+	if (!com->oper[1])
+	{
+		write (fd, "\n", 1);
+		exit(0);
+	}
+	if (ft_strcmp(com->oper[1], "-n") == 0)
+		i = 2;
+	while (com->oper[i])
+	{
+		write (fd, com->oper[i], ft_strlen(com->oper[i]));
+		write (fd, " ", 1);
+		i++;
+	}
+	if (ft_strcmp(com->oper[1], "-n"))
+		write (fd, "\n", 1);
 	exit(0);
 }
 
@@ -76,12 +96,12 @@ void	builtins_child(t_cmd *cmd)
 	{
 		if (cmd->oper[0])
 		{
-			if (!ft_strcmp(cmd->oper[0], "echo1")) // echo
+			if (!ft_strcmp(cmd->oper[0], "echo"))
 				echo_pr(cmd);
 			else if (!ft_strcmp(cmd->oper[0], "cd"))
 				exit(0);
 			else if (!ft_strcmp(cmd->oper[0], "pwd"))
-				exit(0);
+				ft_pwd();
 			else if (!ft_strcmp(cmd->oper[0], "export"))
 				exit(0);
 			else if (!ft_strcmp(cmd->oper[0], "unset"))

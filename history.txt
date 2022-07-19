@@ -1,2 +1,605 @@
 hi
 exit
+export
+echo
+pwd
+cd ..
+ls
+pwd
+ls
+cd
+ls
+unset
+export
+export
+export
+export
+export
+export
+export
+export
+env
+export
+export
+export
+export
+export
+export
+export
+export
+export
+export
+export
+export
+export
+export
+export
+export
+export
+export
+export
+export
+export
+export
+export
+exoport
+export
+export
+clear
+export
+export
+pwd
+pwd
+exit
+exit
+pwd
+exit
+echo
+exit
+la
+ls
+exit
+export
+exit
+export
+
+exportexport
+export
+export
+
+export
+export _123
+export 123
+=====
+export
+export ======
+export
+export ±±±±
+export
+export §§§
+export 123
+export 23
+export 234567
+export 1
+export
+export 123 234
+export 123
+export 2
+export
+export 1
+export 1 2 3 
+export 12
+export 1
+export 1 2 3
+export qwe 
+export
+export 123
+export 123 234 345
+export 123
+export 12313 123213
+export 13213 
+export 123 353 567 
+export 123 2432
+export 123
+export 123
+export 1232 
+export 1232 
+export 123 123
+export 123
+export 13 234 345 
+export 13=24
+export 13 = 24
+export 123 234 354 
+export 123 = 123 
+export
+export rew
+export
+export
+export rew
+export
+export rew
+export
+export rew=2
+export
+export rew=3
+export
+export
+export ert
+export ert=3
+export
+export
+export rew=3
+export
+env
+export
+export rew
+export
+export rew=3
+export
+export rew
+export rew
+export rew=3
+export rew=3
+export
+export rwe
+export
+export rew=3
+export
+sdjh
+pwd
+exit
+exit
+pwd
+exit
+unset pwd
+env
+pwd
+exit
+exit
+pwd
+exit
+env
+unset USER
+env
+unset PWD
+env
+pwd
+ls | pwd
+$?
+exit kjfdg | exit dfgjkh
+exit 45
+exit
+exit
+exit 45
+exit 54 | exit fkjgh
+exit
+env
+unset USER
+env
+exit
+exit
+export
+export rew
+export
+export rew=0
+export
+export
+export 3
+export rew=3
+export 3
+export
+export
+export eeer
+export
+export eeer=3
+export
+export wer=3
+export
+export
+export
+export
+export ew=3
+export
+export
+export 32
+export _ewq=3
+export
+export
+export rew=3
+export
+export rew
+export
+exo
+export rew
+export
+export evf
+export
+export ert
+export
+export
+eport
+export
+export
+export
+export EEE
+export
+clear
+export ewq
+export
+export er=3
+export
+export ewr=3
+export
+eport 
+export rew=3
+export REW=3
+export wr=3
+export ASS=3
+export XAE=3
+export
+export
+export
+env
+clear
+eport
+export
+export VAW=5
+export
+export wer=4
+export
+export rew
+export
+export re=0
+export
+export VA=5
+export
+export VAR=5
+export
+export
+export
+export VAR=2
+export
+export
+export VAR=3
+export VAR=3
+export
+export rew
+export
+export VAR=3
+export
+env
+export WER=4
+env
+export hg
+export
+export
+export WER=4
+export
+export REW=3
+export
+export QWE=3
+export
+export
+export REW=3
+export
+export wr
+export
+export ewq=e
+export
+export
+export REW=3
+export
+export
+export
+export WER=3
+export
+export
+export
+export
+export
+export
+export
+export
+export
+export 123
+export _123
+export
+eport
+export
+export
+export
+export
+export
+export
+export
+export 234
+export _234
+export 123 234 345
+export asd sf sdf
+export 
+export rew
+export
+export WEREWR
+export WEREWR
+export
+export
+export
+export 4
+export wer
+export
+export ljksdf=4
+env
+export ljksdf=4
+export
+export
+export
+export wer
+export w
+export q
+export wr ert rty
+export
+export wrew
+export
+export rew=2
+export
+export REW=2
+export
+export
+export wer
+export
+export wer=3
+export
+export wer
+export 
+export ewr
+export wre=3
+export wer
+export wer-32
+export
+export wer
+export wer wer
+export
+export reww=3
+export
+export wwerwer=324
+make
+./minishell
+exit
+exit
+export wer
+export wer
+export
+export wer
+export wer=234
+export
+export weer
+export wer
+export wer=32344
+export 
+export wer=23424
+export
+export
+export wr
+export
+export
+export wewr
+export
+export wrt
+export wer
+export
+export werre
+export
+export qeq=e
+export
+export wer=3
+export
+export weeer=r
+export
+export
+export wer=3
+export
+export qwewqe
+export
+export wer
+export wer
+export werq
+export werqrqw
+export 1323
+export wedrfgh
+export wewerdsas
+export
+export asdd
+export
+export werad
+export
+;;
+;
+|
+||
+;@@
+| |
+ls
+ls;;
+ls; ;
+ls||
+ls | |
+ls ||
+echo $PWD
+echo $fdsgbkldmbklfdsmklfmd
+echo str1"'str2'"
+echo str1"'$str2'"
+echo 'str1'str2"str3 $PWD str4" "str5"'$PWD' $PWD "$PWD"
+echo "hello><; world"
+echo $hfkdghldf$PWD
+
+echo ' """" '
+echo '"""""""""",         wtf     :""'
+
+export str1 2str = _3str str4=str5 
+ 'e'"x"p'o'r't'
+ 'e'"x"p'o'r't'
+echo "hello;"; $q'c'"h"o $test
+$lkjlkjllkdfs$q$w$e$r "$e"$q"l"'l'$r;
+unset PWD; echo $PWD
+env
+export echo="echo hello";$echo
+export
+export t
+export
+export
+export HGF
+export
+export JKHF=JKLH
+export
+env
+exit
+export
+export dfg
+export
+export JHF=dsfd
+export
+env
+export
+exit
+export
+export fg
+export
+export
+export dfj
+export
+export afd
+export
+env
+export
+exit
+export
+export
+export fg
+export
+export dskjh
+export
+export sdf=dfguj
+export
+env
+env
+export TEST=1223
+env
+учше
+exit
+export dfg
+export
+exit
+export
+export dfgjklh
+export
+exit
+export
+export dfg
+export
+export dfg
+export
+exit
+export dfkjh
+export
+export dfg
+export dfgjkl
+export dfg
+export fkh
+export fdgdf
+export
+export fdgdf
+export
+export
+export USER=jkdfgh
+export
+exit
+export USER=sdfjkhsd
+export
+exit
+export USER=jhsdgf
+
+export
+export skdljfsdf
+export
+export akjhsdf
+export
+env
+exit
+export
+export dfkjh
+export
+export aadfgklj
+export
+export aadfgklj aaaaaaaaaaajhdf
+export aadfgklj aaaaaaaaaaajhdf
+export
+export aasdf4444dfgklj aaaaaaaafaaajhdf
+export
+export TER=jksdfh
+export
+env
+exit
+env
+export TER=sdfjkh
+env
+exit
+export TER=234234
+export TER=234345
+export
+env
+
+env
+unset TER
+env
+export kjdfhgdfg
+export akjshdfjkhsf
+export
+env
+export USER=34534fdef
+env
+export LANG=234
+export
+env
+export USER=345345
+export
+env
+exit
+export USER=kjsdhf
+exit
+export USER=kjdfhg
+exit
+export USER=dsfkjh3
+export
+env
+export kjh43f34
+export
+export akljhdfdg
+export
+exit
+export
+export USER=34jkfh3
+export
+export dskjfh
+export
+env
+exit
+export
+
+export kdfjh
+export akjhdfg
+export
+export kdfjh
+export
+exit
+export
+export sdkfjh
+export
+export USER=dskjfh
+export
+env
+export TEST=345jh
+export
+env
+export akjlhdfg
+export
+exit

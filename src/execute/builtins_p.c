@@ -6,7 +6,7 @@
 /*   By: ssawane <ssawane@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/14 14:18:21 by ssawane           #+#    #+#             */
-/*   Updated: 2022/07/15 12:14:28 by ssawane          ###   ########.fr       */
+/*   Updated: 2022/07/19 21:33:47 by ssawane          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,11 +56,9 @@ void	builtins_parent(void)
 	if (g_b.pipes == 0 && g_b.cmds->oper && g_b.cmds->oper[0])
 	{
 		if (!ft_strcmp(g_b.cmds->oper[0], "cd"))
-			return ; // func
-		// else if (!ft_strcmp(shl.cmds->oper[0], "pwd"))
-		// 	pwd_pr(cmd);
-		// else if (!ft_strcmp(shl.cmds->oper[0], "export"))
-		// 	export_pr(cmd);
+			return ;// func
+		else if (!ft_strcmp(g_b.cmds->oper[0], "export"))
+			export_pr();
 		else if (!ft_strcmp(g_b.cmds->oper[0], "unset"))
 			unset_pr();
 		else if (!ft_strcmp(g_b.cmds->oper[0], "exit"))

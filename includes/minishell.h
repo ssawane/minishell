@@ -6,7 +6,7 @@
 /*   By: ssawane <ssawane@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/06 17:27:19 by ssawane           #+#    #+#             */
-/*   Updated: 2022/07/15 12:18:15 by ssawane          ###   ########.fr       */
+/*   Updated: 2022/07/19 21:37:36 by ssawane          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,7 @@ typedef struct s_shl {
 	char	*line;
 	char	**words;
 	char	**envv;
+	char	**expenv;
 	char	**paths;
 	t_cell	*cells;
 	t_cell	*t1;
@@ -88,6 +89,14 @@ void	builtins_parent(void);
 void	builtins_child(t_cmd *cmd);
 void	finish_free(void);
 int		digscheck(char *str);
+void	ft_pwd(void);
+void	ft_check_builtin(int *fd);
+void	unset_pr(void);
+void	export_pr(void);
+void	ft_print(char **env);
+int		ft_masslen(char **str);
+int		ft_export_check(char *str);
+void	expenv_sort(void);
 
 //signals
 void	signals_proc(void);

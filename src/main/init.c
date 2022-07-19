@@ -6,11 +6,22 @@
 /*   By: ssawane <ssawane@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/14 15:22:08 by ssawane           #+#    #+#             */
-/*   Updated: 2022/07/14 15:46:52 by ssawane          ###   ########.fr       */
+/*   Updated: 2022/07/19 21:33:22 by ssawane          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/minishell.h"
+
+void	local_expenv(void)
+{
+	int		i;
+
+	i = -1;
+	g_b.expenv = malloc(sizeof(char *) * (g_b.envnum + 1));
+	while (++i < g_b.envnum)
+		g_b.expenv[i] = ft_strdup(g_b.envv[i]);
+	g_b.expenv[i] = NULL;
+}
 
 void	local_env(char **envp)
 {
@@ -70,5 +81,6 @@ void	shell_init(char **envp)
 	g_b.close = 0;
 	g_b.exit = -1;
 	local_env(envp);
+	local_expenv();
 	shlvl_up();
 }
