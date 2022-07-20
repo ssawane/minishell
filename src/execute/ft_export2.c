@@ -6,7 +6,7 @@
 /*   By: ssawane <ssawane@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/05 12:43:38 by tandrea           #+#    #+#             */
-/*   Updated: 2022/07/19 21:32:35 by ssawane          ###   ########.fr       */
+/*   Updated: 2022/07/20 13:33:23 by ssawane          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ void	ft_print(char **env)
 		{
 			write(fd, "=", 1);
 			write(fd, "\"", 1);
-			write(fd, str[1], ft_strlen(str[1]));
+			write(fd, ft_strchr(env[i], '=') + 1, ft_strlen(ft_strchr(env[i], '=')) - 1);
 			write(fd, "\"", 1);
 		}
 		write(fd, "\n", 1);
@@ -61,7 +61,7 @@ int	ft_export_check(char *str)
 			g_b.exit_code = 1;
 			return (1);
 		}
-		if (!ft_isalnum(str[i]) && str[i] != '_' && str[i] != '=')
+		if (!ft_isprint(str[i]))
 		{
 			printf("export: `%s': not a valid identifier\n", str);
 			g_b.exit_code = 1;

@@ -691,3 +691,22 @@ export
 export jsdf
 export
 exit
+unset path
+ls
+unset PATH
+ls
+export ret
+export ret=234
+export 345
+ex[prt !!
+export !!
+exit
+export
+exit
+export
+export ret
+export ret=123
+export
+export ret=345345=345345
+export
+exit
