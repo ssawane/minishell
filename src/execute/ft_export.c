@@ -6,23 +6,33 @@
 /*   By: ssawane <ssawane@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/05 12:43:38 by tandrea           #+#    #+#             */
-/*   Updated: 2022/07/19 22:05:21 by ssawane          ###   ########.fr       */
+/*   Updated: 2022/07/20 13:02:55 by ssawane          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/minishell.h"
 
-int	arg_exist(char **en, char *str, int j)
+int	arg_exist(char **en, char *str, int j, int i)
 {
-	int		i;
 	char	*tmp;
 
 	i = 0;
 	tmp = ft_substr(str, 0, j + 1);
-	while (en[i] && ft_strnstr(en[i], tmp, j + 1) == NULL)
+	while ((en[i] && !ft_strnstr(en[i], tmp, j + 1)))
 		i++;
 	free(tmp);
 	if (en[i] != NULL)
+	{
+		free(en[i]);
+		en[i] = ft_strdup(str);
+		return (1);
+	}
+	i = 0;
+	tmp = ft_substr(str, 0, j);
+	while (en[i] && !ft_strnstr(en[i], tmp, j))
+			i++;
+	free(tmp);
+	if (en[i] != NULL && ft_strlen(en[i]) == j)
 	{
 		free(en[i]);
 		en[i] = ft_strdup(str);
@@ -37,9 +47,9 @@ void	add_toenv(char *str, int j)
 	int		len;
 	int		i;
 
-	if (arg_exist(g_b.envv, str, j))
-		return ;
 	i = -1;
+	if (arg_exist(g_b.envv, str, j, i))
+		return ;
 	len = ft_masslen(g_b.envv);
 	new_env = malloc(sizeof(char *) * (len + 2));
 	while (++i < len)
@@ -56,9 +66,9 @@ void	add_toexpenv(char *str, int j)
 	int		len;
 	int		i;
 
-	if (j > 0 && arg_exist(g_b.expenv, str, j))
-		return ;
 	i = 0;
+	if (j > 0 && arg_exist(g_b.expenv, str, j, i))
+		return ;
 	len = ft_masslen(g_b.expenv);
 	while (g_b.expenv[i] && ft_strnstr(g_b.expenv[i],
 			str, ft_strlen(str)) == NULL)

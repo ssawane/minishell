@@ -610,3 +610,84 @@ export USER=sdfjh4
 export
 env
 exit
+export
+export fkjdhg
+export
+export der
+export
+export der=123
+export
+exit
+export
+export ret
+export
+export ret=dfkl
+export
+export ret=dfgdgf
+export
+export ret
+export
+exit
+export
+export ret
+export ret=234
+export
+exit
+export ret
+export
+export ret=345
+export
+exit
+export
+export ret
+export ret=123
+export USER=123
+export U=123
+exit
+export
+export ret
+export ret=123
+exit
+export ret
+export ret=123
+export ret=122
+export
+exit
+export ret
+export ret=123
+exit
+export ret
+export ret=123
+export
+exit
+export ret
+export ret=123
+exit
+export ret
+export ret=123
+export ret
+export ret=123
+export ret
+export ret=123
+export
+export dfgkjh
+export mara
+export
+export mara=43536
+export
+export mara1
+export
+export mara=123
+export mara=12354g45
+export marq
+export
+export marq=32434ff
+export
+exit
+export ret
+export
+export ret=123
+export
+export jsdf
+export
+exit
