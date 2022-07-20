@@ -6,7 +6,7 @@
 #    By: ssawane <ssawane@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/01 16:28:48 by ssawane           #+#    #+#              #
-#    Updated: 2022/07/19 21:17:29 by ssawane          ###   ########.fr        #
+#    Updated: 2022/07/20 13:44:14 by ssawane          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,8 +28,7 @@ PARSE	=	cmdtolist fdopen spc_add spc_change parsing quot_corr dollar_corr
 SRCS	=	$(addsuffix .c, $(addprefix $(MN_DR), $(MAIN)))\
 			$(addsuffix .c, $(addprefix $(PRS_DR), $(PARSE)))\
 			$(addsuffix .c, $(addprefix $(EXE_DR), $(EXECUTE)))\
-			$(addsuffix .c, $(addprefix $(LFT_DR), $(LIBMOD)))\
-			$(addsuffix .c, $(addprefix temp/, temp_print))
+			$(addsuffix .c, $(addprefix $(LFT_DR), $(LIBMOD)))
 OBJ		=	$(SRCS:%.c=%.o)
 
 .PHONY	:	all clean fclean re

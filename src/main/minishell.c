@@ -6,7 +6,7 @@
 /*   By: ssawane <ssawane@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/01 17:02:34 by ssawane           #+#    #+#             */
-/*   Updated: 2022/07/14 15:35:59 by ssawane          ###   ########.fr       */
+/*   Updated: 2022/07/20 13:38:32 by ssawane          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,13 @@ void	finish_free(void)
 			free(g_b.envv[i]);
 		free(g_b.envv);
 	}
+	i = -1;
+	if (g_b.expenv)
+	{
+		while (g_b.expenv[++i])
+			free(g_b.expenv[i]);
+		free(g_b.expenv);
+	}
 	write(1, "exit\n", 5);
 	exit(g_b.exit);
 }
@@ -58,11 +65,7 @@ int	main(int ac, char **av, char **envp)
 	while (1)
 	{
 		if (!main_parsing())
-		{
-			// print3();
 			main_exe();
-			// print3();
-		}
 		rowed_free();
 	}
 	return (0);

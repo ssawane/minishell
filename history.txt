@@ -710,3 +710,21 @@ export
 export ret=345345=345345
 export
 exit
+export 234
+export dfglkj
+export
+export ma
+exportma=234
+export ma=234
+export
+sdflkj
+"sdffds ffg"sdf
+exit
+sdfsdf
+sdf
+jkhdf
+kjhd
+sdf
+exit
+sdfkl
+exit 34
