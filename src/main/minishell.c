@@ -6,7 +6,7 @@
 /*   By: ssawane <ssawane@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/01 17:02:34 by ssawane           #+#    #+#             */
-/*   Updated: 2022/07/20 13:38:32 by ssawane          ###   ########.fr       */
+/*   Updated: 2022/07/21 13:22:50 by ssawane          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,8 @@ void	finish_free(void)
 			free(g_b.expenv[i]);
 		free(g_b.expenv);
 	}
+	if (g_b.hist_path)
+		free(g_b.hist_path);
 	write(1, "exit\n", 5);
 	exit(g_b.exit);
 }

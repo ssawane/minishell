@@ -6,7 +6,7 @@
 /*   By: ssawane <ssawane@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/06 17:27:19 by ssawane           #+#    #+#             */
-/*   Updated: 2022/07/19 21:37:36 by ssawane          ###   ########.fr       */
+/*   Updated: 2022/07/21 14:07:26 by ssawane          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,7 @@ typedef struct s_shl {
 	int		exit_code;
 	int		*pids;
 	char	*line;
+	char	*hist_path;
 	char	**words;
 	char	**envv;
 	char	**expenv;
@@ -57,17 +58,15 @@ typedef struct s_shl {
 
 extern t_shl	g_b;
 
-//libft
 t_cell	*ft_cellnew(char *content);
 t_cmd	*ft_cmdnew(void);
 void	ft_celladd_back(t_cell **cell, t_cell *new);
 void	ft_cmdadd_back(t_cmd **cmd, t_cmd *new);
 int		ft_strcmp(const char *s1, const char *s2);
+char	*ft_strcat(char *s1, char *s2);
 
-//preparsing
 void	shell_init(char **envp);
 
-//parsing
 t_cmd	*cmd_cells_convert(void);
 void	redir_proc(t_cell *cell, t_cmd *cmd);
 void	quot_correct(void);
@@ -80,7 +79,6 @@ int		main_parsing(void);
 int		dollar_check(char *word, int i);
 int		pointer(int t);
 
-//execute
 void	main_exe(void);
 void	execute(t_cmd *cmd);
 void	pipes_check(void);
@@ -97,14 +95,11 @@ void	ft_print(char **env);
 int		ft_masslen(char **str);
 int		ft_export_check(char *str);
 void	expenv_sort(void);
+void	ft_cd(void);
+void	add_toenv(char *str, int j);
+void	add_toexpenv(char *str, int j);
 
-//signals
 void	signals_proc(void);
 void	inside_pr(int signum);
-
-//temp
-void	print(void);
-void	print2(void);
-void	print3(void);
 
 #endif

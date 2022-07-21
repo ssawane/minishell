@@ -6,7 +6,7 @@
 /*   By: ssawane <ssawane@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/14 15:22:08 by ssawane           #+#    #+#             */
-/*   Updated: 2022/07/19 21:33:22 by ssawane          ###   ########.fr       */
+/*   Updated: 2022/07/21 13:24:35 by ssawane          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,6 +71,29 @@ void	shlvl_up(void)
 	free(tmp);
 }
 
+void	history_path(void)
+{
+	char	*res;
+	char	*tmp;
+	int		i;
+
+	i = 0;
+	res = NULL;
+	while (ft_strnstr(g_b.envv[i], "_=", 2) == NULL)
+	{
+		if (g_b.envv[++i] == NULL)
+		{
+			write(2, "minishell: cannot create history file\n", 38);
+			exit(1);
+		}
+	}
+	res = ft_substr(g_b.envv[i], 2, ft_strlen(g_b.envv[i]) - 13);
+	tmp = res;
+	res = ft_strjoin(res, "history.txt");
+	free(tmp);
+	g_b.hist_path = res;
+}
+
 void	shell_init(char **envp)
 {
 	g_b.line = NULL;
@@ -82,5 +105,6 @@ void	shell_init(char **envp)
 	g_b.exit = -1;
 	local_env(envp);
 	local_expenv();
+	history_path();
 	shlvl_up();
 }

@@ -6,7 +6,7 @@
 /*   By: ssawane <ssawane@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/12 20:50:04 by ssawane           #+#    #+#             */
-/*   Updated: 2022/07/19 21:22:27 by ssawane          ###   ########.fr       */
+/*   Updated: 2022/07/21 15:51:05 by ssawane          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,7 +82,6 @@ void	echo_pr(t_cmd *com)
 	while (com->oper[i])
 	{
 		write (fd, com->oper[i], ft_strlen(com->oper[i]));
-		write (fd, " ", 1);
 		i++;
 	}
 	if (ft_strcmp(com->oper[1], "-n"))

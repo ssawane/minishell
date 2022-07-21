@@ -6,7 +6,7 @@
 /*   By: ssawane <ssawane@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/14 11:27:19 by ssawane           #+#    #+#             */
-/*   Updated: 2022/07/14 15:48:46 by ssawane          ###   ########.fr       */
+/*   Updated: 2022/07/21 13:26:11 by ssawane          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,13 @@ int	pointer(int t)
 
 void	heredoc_next(t_cmd *cmd, char *res, char *line)
 {
+	char	*tmp;
+
 	if (res)
 	{
+		tmp = res;
+		res = ft_strjoin(res, "\n");
+		free(tmp);
 		pipe(cmd->pfd);
 		write(cmd->pfd[1], res, ft_strlen(res));
 		cmd->in = cmd->pfd[0];

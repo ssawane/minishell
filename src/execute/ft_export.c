@@ -6,7 +6,7 @@
 /*   By: ssawane <ssawane@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/05 12:43:38 by tandrea           #+#    #+#             */
-/*   Updated: 2022/07/20 13:02:55 by ssawane          ###   ########.fr       */
+/*   Updated: 2022/07/21 15:00:06 by ssawane          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -121,6 +121,10 @@ void	export_pr(void)
 	else if (g_b.cmds->oper[1])
 	{
 		while (g_b.cmds->oper[++i])
-			add_envexpenv(g_b.cmds->oper[i]);
+		{
+			if (ft_strncmp(g_b.cmds->oper[i], "_=", 2)
+				&& ft_strcmp(g_b.cmds->oper[i], "_"))
+				add_envexpenv(g_b.cmds->oper[i]);
+		}
 	}
 }

@@ -6,7 +6,7 @@
 /*   By: ssawane <ssawane@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/06 16:21:59 by ssawane           #+#    #+#             */
-/*   Updated: 2022/07/14 15:50:03 by ssawane          ###   ########.fr       */
+/*   Updated: 2022/07/21 13:17:41 by ssawane          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,10 +57,10 @@ int	syntax_errors_check(void)
 
 void	adding_history(void)
 {
-	int	fd;
+	int		fd;
 
 	add_history(g_b.line);
-	fd = open("history.txt", O_CREAT | O_WRONLY | O_APPEND, 0644);
+	fd = open(g_b.hist_path, O_CREAT | O_WRONLY | O_APPEND, 0644);
 	if (fd == -1)
 	{
 		perror("minishell: cannot open history file");

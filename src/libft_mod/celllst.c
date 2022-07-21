@@ -6,11 +6,35 @@
 /*   By: ssawane <ssawane@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/06 17:23:34 by ssawane           #+#    #+#             */
-/*   Updated: 2022/07/03 14:45:30 by ssawane          ###   ########.fr       */
+/*   Updated: 2022/07/21 14:56:56 by ssawane          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/minishell.h"
+
+char	*ft_strcat(char *s1, char *s2)
+{
+	int		i;
+	int		j;
+	char	*s3;
+
+	i = 0;
+	j = 0;
+	s3 = malloc(ft_strlen(s1) + ft_strlen(s2) + 1);
+	while (s1[i])
+	{
+		s3[i] = s1[i];
+		i++;
+	}
+	while (s2[j])
+	{
+		s3[i] = s2[j];
+		i++;
+		j++;
+	}
+	s3[i] = '\0';
+	return (s3);
+}
 
 int	ft_strcmp(const char *s1, const char *s2)
 {
