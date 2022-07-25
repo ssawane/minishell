@@ -6,22 +6,11 @@
 /*   By: ssawane <ssawane@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/14 15:22:08 by ssawane           #+#    #+#             */
-/*   Updated: 2022/07/21 13:24:35 by ssawane          ###   ########.fr       */
+/*   Updated: 2022/07/25 21:09:31 by ssawane          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/minishell.h"
-
-void	local_expenv(void)
-{
-	int		i;
-
-	i = -1;
-	g_b.expenv = malloc(sizeof(char *) * (g_b.envnum + 1));
-	while (++i < g_b.envnum)
-		g_b.expenv[i] = ft_strdup(g_b.envv[i]);
-	g_b.expenv[i] = NULL;
-}
 
 void	local_env(char **envp)
 {
@@ -45,6 +34,25 @@ void	local_env(char **envp)
 	}
 }
 
+void	add_shlvl(void)
+{
+	char	**new_env;
+	int		i;
+	int		k;
+
+	i = -1;
+	k = 0;
+	while (g_b.envv[k])
+		k++;
+	new_env = malloc(sizeof(char *) * (k + 2));
+	while (++i < k)
+		new_env[i] = g_b.envv[i];
+	new_env[i++] = ft_strdup("SHLVL=1");
+	new_env[i] = NULL;
+	free(g_b.envv);
+	g_b.envv = new_env;
+}
+
 void	shlvl_up(void)
 {
 	int		def;
@@ -56,18 +64,21 @@ void	shlvl_up(void)
 	{
 		if (!g_b.envv[++i])
 		{
-			write(2, "minishell: no shlvl\n", 20);
+			add_shlvl();
 			return ;
 		}
 	}
 	tmp = ft_substr(g_b.envv[i], 6, ft_strlen(g_b.envv[i]) - 5);
 	free(g_b.envv[i]);
-	def = ft_atoi(tmp) + 1;
-	if (def == 1000)
-		def = 0;
-	free(tmp);
-	tmp = ft_itoa(def);
-	g_b.envv[i] = ft_strjoin("SHLVL=", tmp);
+	def = ft_atoi(tmp);
+	if (def == 999)
+		g_b.envv[i] = ft_strdup("SHLVL=");
+	else
+	{
+		free(tmp);
+		tmp = ft_itoa(def + 1);
+		g_b.envv[i] = ft_strjoin("SHLVL=", tmp);
+	}
 	free(tmp);
 }
 

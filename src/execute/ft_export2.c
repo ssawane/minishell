@@ -6,7 +6,7 @@
 /*   By: ssawane <ssawane@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/05 12:43:38 by tandrea           #+#    #+#             */
-/*   Updated: 2022/07/20 13:36:30 by ssawane          ###   ########.fr       */
+/*   Updated: 2022/07/25 21:08:40 by ssawane          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,15 @@ void	ft_free_str(char **str)
 	while (str[++i])
 		free(str[i]);
 	free(str);
+}
+
+void	print_cont(int fd, char *str)
+{
+	write(fd, "=", 1);
+	write(fd, "\"", 1);
+	write(fd, ft_strchr(str, '=') + 1,
+		ft_strlen(ft_strchr(str, '=')) - 1);
+	write(fd, "\"", 1);
 }
 
 void	ft_print(char **env)
@@ -36,41 +45,17 @@ void	ft_print(char **env)
 		str = ft_split(env[i], '=');
 		write(fd, "declare -x ", 11);
 		write(fd, str[0], ft_strlen(str[0]));
-		if (str[1])
+		if (ft_strchr(env[i], '=') && !str[1])
 		{
 			write(fd, "=", 1);
 			write(fd, "\"", 1);
-			write(fd, ft_strchr(env[i], '=') + 1,
-				ft_strlen(ft_strchr(env[i], '=')) - 1);
 			write(fd, "\"", 1);
 		}
+		else if (str[1])
+			print_cont(fd, env[i]);
 		write(fd, "\n", 1);
 		ft_free_str(str);
 	}
-}
-
-int	ft_export_check(char *str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i])
-	{
-		if (!ft_isalpha(str[0]) && str[0] != '_')
-		{
-			printf("export: `%s': not a valid identifier\n", str);
-			g_b.exit_code = 1;
-			return (1);
-		}
-		if (!ft_isprint(str[i]))
-		{
-			printf("export: `%s': not a valid identifier\n", str);
-			g_b.exit_code = 1;
-			return (1);
-		}
-		i++;
-	}
-	return (0);
 }
 
 int	ft_masslen(char **str)

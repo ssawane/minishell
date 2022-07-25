@@ -6,7 +6,7 @@
 /*   By: ssawane <ssawane@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/14 11:27:19 by ssawane           #+#    #+#             */
-/*   Updated: 2022/07/21 13:26:11 by ssawane          ###   ########.fr       */
+/*   Updated: 2022/07/25 20:44:39 by ssawane          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,13 @@ void	heredoc_next(t_cmd *cmd, char *res, char *line)
 		cmd->in = cmd->pfd[0];
 		close(cmd->pfd[1]);
 		free(res);
+	}
+	else
+	{
+		pipe(cmd->pfd);
+		write(cmd->pfd[1], NULL, 0);
+		cmd->in = cmd->pfd[0];
+		close(cmd->pfd[1]);
 	}
 	free(line);
 }

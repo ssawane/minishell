@@ -6,7 +6,7 @@
 /*   By: ssawane <ssawane@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/06 17:27:19 by ssawane           #+#    #+#             */
-/*   Updated: 2022/07/21 14:07:26 by ssawane          ###   ########.fr       */
+/*   Updated: 2022/07/25 21:10:11 by ssawane          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,5 +101,9 @@ void	add_toexpenv(char *str, int j);
 
 void	signals_proc(void);
 void	inside_pr(int signum);
+
+char	*digitfirst(char *str, int k, int *j);
+void	tilda_proc(void);
+void	local_expenv(void);
 
 #endif

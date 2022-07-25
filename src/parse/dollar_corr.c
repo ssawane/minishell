@@ -6,23 +6,11 @@
 /*   By: ssawane <ssawane@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/03 13:54:12 by ssawane           #+#    #+#             */
-/*   Updated: 2022/07/12 16:12:35 by ssawane          ###   ########.fr       */
+/*   Updated: 2022/07/25 21:10:53 by ssawane          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/minishell.h"
-
-int	dollar_check(char *word, int i)
-{
-	i++;
-	while (word[i] && word[i] != 34)
-	{
-		if (word[i] == '$')
-			return (1);
-		i++;
-	}
-	return (0);
-}
 
 char	*quot_del_after_dollar(char *str, int start, int *end)
 {
@@ -81,6 +69,23 @@ char	*incorrect_dollar(char *str, int *start)
 	return (res);
 }
 
+char	*dollar_step3(char *str, int k, int *p)
+{
+	char	*res;
+
+	while (str[*p] && (ft_isalpha(str[*p]) || ft_isdigit(str[*p])
+			|| str[*p] == '_'))
+		*p += 1;
+	if (*p > k)
+		res = add_fromenv(str, k, p);
+	else
+	{
+		res = str;
+		*p -= 1;
+	}
+	return (res);
+}
+
 char	*dollar_step2(char *str, int *p)
 {
 	int		k;
@@ -94,16 +99,15 @@ char	*dollar_step2(char *str, int *p)
 	else
 	{
 		k = *p;
-		while (str[*p] && str[*p] != 34 && str[*p] != 39
-			&& str[*p] != '$' && str[*p] != ' ' && str[*p - 1] != '?')
-			*p += 1;
-		if (*p > k)
-			res = add_fromenv(str, k, p);
-		else
+		if (str[*p] && str[*p] == '?')
 		{
-			res = str;
-			*p -= 1;
+			*p += 1;
+			res = add_fromenv(str, k, p);
 		}
+		else if (ft_isdigit(str[*p]))
+			res = digitfirst(str, k, p);
+		else
+			res = dollar_step3(str, k, p);
 	}
 	return (res);
 }

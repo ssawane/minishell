@@ -6,7 +6,7 @@
 /*   By: ssawane <ssawane@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/16 11:13:34 by ssawane           #+#    #+#             */
-/*   Updated: 2022/07/14 15:51:41 by ssawane          ###   ########.fr       */
+/*   Updated: 2022/07/25 21:05:14 by ssawane          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,9 +45,9 @@ char	*word_from_env2(char *toenv)
 	char	*fromenv;
 	int		i;
 
-	i = -1;
+	i = 0;
 	fromenv = NULL;
-	while (g_b.envv[++i])
+	while (g_b.envv[i])
 	{
 		if (!ft_strncmp(g_b.envv[i], toenv, ft_strlen(toenv)))
 		{
@@ -55,6 +55,7 @@ char	*word_from_env2(char *toenv)
 					ft_strlen(g_b.envv[i]) - ft_strlen(toenv));
 			break ;
 		}
+		i++;
 	}
 	return (fromenv);
 }

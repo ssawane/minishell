@@ -6,7 +6,7 @@
 /*   By: ssawane <ssawane@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/06 16:21:59 by ssawane           #+#    #+#             */
-/*   Updated: 2022/07/21 13:17:41 by ssawane          ###   ########.fr       */
+/*   Updated: 2022/07/25 21:07:05 by ssawane          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,14 +95,16 @@ int	main_parsing(void)
 		g_b.exit = 0;
 		finish_free();
 	}
-	adding_history();
-	if (isempty_line(g_b.line) || spaces_adding()
-		|| spaces_changing())
+	if (!isempty_line(g_b.line))
+		adding_history();
+	if (isempty_line(g_b.line)
+		|| spaces_adding() || spaces_changing())
 		return (1);
 	g_b.words = ft_split(g_b.line, '\n');
 	g_b.cells = cell_words_convert();
 	if (syntax_errors_check())
 		return (1);
+	tilda_proc();
 	quot_correct();
 	g_b.cmds = cmd_cells_convert();
 	if (g_b.close == 1)

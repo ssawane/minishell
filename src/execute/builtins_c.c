@@ -6,7 +6,7 @@
 /*   By: ssawane <ssawane@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/12 20:50:04 by ssawane           #+#    #+#             */
-/*   Updated: 2022/07/21 15:51:05 by ssawane          ###   ########.fr       */
+/*   Updated: 2022/07/25 20:51:43 by ssawane          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,14 +97,12 @@ void	builtins_child(t_cmd *cmd)
 		{
 			if (!ft_strcmp(cmd->oper[0], "echo"))
 				echo_pr(cmd);
-			else if (!ft_strcmp(cmd->oper[0], "cd"))
+			else if (!ft_strcmp(cmd->oper[0], "cd")
+				|| !ft_strcmp(cmd->oper[0], "export")
+				|| !ft_strcmp(cmd->oper[0], "unset"))
 				exit(0);
 			else if (!ft_strcmp(cmd->oper[0], "pwd"))
 				ft_pwd();
-			else if (!ft_strcmp(cmd->oper[0], "export"))
-				exit(0);
-			else if (!ft_strcmp(cmd->oper[0], "unset"))
-				exit(0);
 			else if (!ft_strcmp(cmd->oper[0], "env"))
 				env_pr();
 			else if (!ft_strcmp(cmd->oper[0], "exit"))
@@ -112,6 +110,8 @@ void	builtins_child(t_cmd *cmd)
 			else
 				execute(cmd);
 		}
+		else
+			execute(cmd);
 	}
 	else
 		execute(cmd);

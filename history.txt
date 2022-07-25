@@ -1,0 +1,181 @@
+$0
+$)kjhdf
+$0kjhdf
+$1kjhdf
+$Y]
+$Y
+$USER
+exit
+$1USER
+$0
+$0
+exit
+$0
+$1
+$0
+$1
+exit
+$1
+exit
+$1
+exit
+$1
+sdfklj$1kjhsd
+sdfklj$1mara
+$1
+$1mara
+$1mara$1
+mara$1
+exit
+$1
+$1mara
+mara$1
+$1mara$1
+$0
+hi$USER
+hi$USER?hi
+hi$USER$hi
+exit
+$0
+$0mara
+$0$USER
+$USER$0
+$USER$1
+exit
+exit
+$USER?her
+$0
+$9
+exit
+exit
+$7
+exit
+$0
+exit
+exit
+cd ..
+ls
+$0
+cd minishell 
+8
+$7
+$7ysa
+$7yUSER
+. echo $TEST=asdas
+$TEST=asdas
+echo $1TEST=asdas
+$0
+exit
+exit
+e
+ert
+$1
+$1User
+$0sdd
+exit
+$?
+$?dsfsdf
+exit
+$USER
+$USE
+$USER$USER
+$0
+exit
+$1USER
+$pwd
+$PWD
+exit
+~
+exit
+~
+exit
+~
+~jh
+~
+$~
+ubset HOME
+unset HOME
+~
+exit
+env
+~
+ls
+exit
+export
+exit
+export
+export a=
+export
+exit
+env
+./minishell 
+env
+exit
+env
+exit
+./minishell 
+env
+./minishell 
+env
+exit
+env
+exit
+exit
+unset SHLVL
+env
+./minishell 
+unset SHLVL
+env
+./minishell 
+env
+exit
+env
+exit
+export SHLVL=999
+env
+./minishell 
+env
+./minishell 
+env
+./minishell 
+env
+exit
+exit
+exit
+exit
+exit
+exit
+<< t1 cat
+<<t1
+<<t1
+<< t1
+<< t1
+make clean
+exit
+sdfsdf
+sdfsdfsdf
+sdfsdf 
+sdfsdf
+<< t1 cat
+<< t1
+<< t1
+<< t1 cat
+<< t1
+<< t1 cat
+exit
+export a=
+env
+env
+env
+export
+export a=sdf
+export
+export d=
+export
+exit
+<< t cat
+exit
+<< t cat
+<< y cat
+<< y cat
+exit
