@@ -179,3 +179,264 @@ exit
 << y cat
 << y cat
 exit
+clear
+echo -n
+echo
+echo -n -n
+echo -n -n asd
+echo -n -n asd
+pwd
+echo $TEST
+echo $TEST=asdsads
+echo $1TEST=asdsads
+export mmm=
+export
+env | grep PWD
+cd `
+cd ~
+env | grep PWD
+echo -n
+echo
+echo -n -n -n asdf
+echo -n -n -h
+echo -n -n -n -n afd gdhf drty
+echo sad dsffgh fghf | cat -e
+echo sad dsffgh fghf | cat -e
+echo -n sad dsffgh fghf | cat -e
+echo -n -n -n
+echo
+echo -n -n -n sad dsffgh fghf | cat -e
+
+echo
+echo -n -n -n
+echo 123 wer dfg
+env | grep PWD
+cd ..
+env | grep PWD
+cd ..
+env | grep PWD
+cd ..
+env | grep PWD
+cd ..
+env | grep PWD
+cd ..
+env | grep PWD
+cd ..
+env | grep PWD
+cd ..
+env | grep PWD
+/bin/ls
+/bin/ls -l
+"/bin/ls -l"
+"/bin/ls "-l
+"/bin/ls"  -l
+"/bin/ls " -l
+"   "
+"      "
+'    '
+echo
+echo -n
+echo -n lol
+echo -n -n 
+echo -n -n lol
+echo -n -n lol -n
+echo -n -n lol -n
+echo -n -n lol -n
+echo -n -n lol -n
+echo -n -n lol -n
+echo -n -n lol -n
+echo -n -n lol -n
+echo -n -n lol -n
+echo  lol kek
+echo  lol     kek
+exit
+exit 1
+exit 1000
+exit -1000
+exit qwe
+exit 1 2 
+ls 
+echo $?
+ls --
+cat 123
+ls --
+cat 123
+echo $?
+qwe
+echo $?
+wc Makefile 
+echo $?
+wc Makefi
+echo $?
+qwe
+expr $? + $?
+cat 
+echo $?
+cat 
+cat 
+echo " cat lol.c" 
+echo $PWD
+echo $PWDa
+echo "$PWD"
+echo '$PWD'
+echo "'$PWD'"
+echo '"$PWD"'
+echo $
+ls
+pwd
+env
+export lol=kek
+env
+export kek
+export
+env
+export 123
+export _
+unset lol
+env
+export kek=loo
+env
+export
+unset kek
+env
+pwd
+cd ..
+env
+env | grep PWD
+cd ..
+env | grep PWD
+cd Downloads/
+env | grep PWD
+cd -
+cd .
+pwd
+cd .
+unset PWD
+cd ..
+env | grep PWD
+unset $PTAH
+ls
+pwd
+echo
+wc
+env | grep PATH
+unset PATH
+wc
+ls
+qwe
+pwe
+pwd
+ls
+echo
+qwe
+export PATH=/bin
+ls
+wc
+echo
+pwd
+env
+env > 1
+pwd
+cd Downloads/
+cd minishell
+pwd
+ls
+env > 1
+1< cat > 2 > 3
+1 < cat > 2 > 3
+env > 1
+< 1 cat > 2 > 3 > 4
+wc 2>1
+wc 123 2>1
+wc 123 2>1
+<< lol ca
+<< lol cat
+<< lol cat
+<< lol cat
+<< lol cat
+<< lol cat
+cat Makefile  | grep a | grep b | grep e > 1
+cat Makefile  | grep a | grep b | grep e > 1
+cat Makefile  | grep a | grep b | 
+cat Makefile  | grep a | grep b | qwe
+say hello | say hello
+bash | bash | bash
+echo -n -n llo -n
+echo -n -n wer -n
+echo -n -n wer -n
+echo -n -n wer -n
+echo -n -n -n ewr -n
+echo -n -n wer -n
+echo -n -n wer -n 
+echo -n -n wer -n 
+echo -n -n -n er -n
+echo -n -n -n wer -n
+echo -n -n -n ew -n
+echo -n -n -n ertr -n
+echo -n -n -n -n wer -n
+echo -n -n -n wer -n
+echo -n -n wer -n
+echo -n
+echo 
+echo 
+echo
+echo -n
+echo
+echo
+echo 123
+echo
+echo
+echo 3
+echo we
+echo
+echo
+echo -1
+echo
+echo
+echo
+echo
+echo
+echo
+pwd
+echo
+echo
+echo
+echo -
+echo
+echo -n
+echo
+echo
+echo
+echo
+echo
+ls
+cd libft 
+ls
+cd ..
+ls
+pwd
+env
+ls
+cd ~
+ls
+~
+echo ~
+ls
+cd 
+ls
+cd Desktop 
+ls
+cd ../Documents 
+ls
+env
+pwd
+sdf
+exit
+$1
+$0
+exit
+$0 ddf
+exit
+$!=1\
+$1dfg
+exit

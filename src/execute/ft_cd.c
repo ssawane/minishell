@@ -6,7 +6,7 @@
 /*   By: ssawane <ssawane@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/09 23:37:23 by tandrea           #+#    #+#             */
-/*   Updated: 2022/07/21 15:25:21 by ssawane          ###   ########.fr       */
+/*   Updated: 2022/08/05 12:06:48 by ssawane          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,30 +50,37 @@ void	empty_arg(char *old)
 	return ;
 }
 
+void	ft_change(char **new, int i, char *str)
+{
+	char	*tmp;
+
+	tmp = ft_strcat(str, *new);
+	free(*new);
+	add_toenv(tmp, i);
+	add_toexpenv(tmp, i);
+	free(tmp);
+}
+
 void	ft_cd(void)
 {
 	int		temp;
 	char	*new;
 	char	*old;
-	char	*tmp;
 
 	old = NULL;
 	new = NULL;
+	temp = 0;
 	old = getcwd(old, 1000);
-	if (!g_b.cmds->oper[1])
+	if (!g_b.cmds->oper[1] || g_b.cmds->oper[1][0] == '~')
 		return (empty_arg(old));
-	temp = chdir(g_b.cmds->oper[1]);
+	if (ft_strcmp(old, "/Users") == 0
+		&& ft_strcmp(g_b.cmds->oper[1], "..") == 0)
+		chdir("/");
+	else
+		temp = chdir(g_b.cmds->oper[1]);
 	new = getcwd(new, 1000);
-	tmp = ft_strcat("PWD=", new);
-	free(new);
-	add_toenv(tmp, 3);
-	add_toexpenv(tmp, 3);
-	free(tmp);
-	tmp = ft_strcat("OLDPWD=", old);
-	free(old);
-	add_toenv(tmp, 6);
-	add_toexpenv(tmp, 6);
-	free(tmp);
+	ft_change(&new, 3, "PWD=");
+	ft_change(&old, 6, "OLDPWD=");
 	if (temp < 0)
 		cd_error(g_b.cmds->oper[1]);
 }

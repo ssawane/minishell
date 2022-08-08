@@ -68,20 +68,21 @@ void	echo_pr(t_cmd *com)
 {
 	int	fd;
 	int	i;
+	int	k;
 
 	fd = 1;
 	i = 1;
+	k = 0;
 	ft_check_builtin(&fd);
+	while (ft_strcmp(com->oper[++k], "-n") == 0)
+			i++;
 	if (!com->oper[1])
-	{
 		write (fd, "\n", 1);
-		exit(0);
-	}
-	if (ft_strcmp(com->oper[1], "-n") == 0)
-		i = 2;
 	while (com->oper[i])
 	{
 		write (fd, com->oper[i], ft_strlen(com->oper[i]));
+		if (i != k + 1)
+			write (fd, " ", 1);
 		i++;
 	}
 	if (ft_strcmp(com->oper[1], "-n"))
