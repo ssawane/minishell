@@ -32,7 +32,7 @@ void	ft_pwd(void)
 	fd = 1;
 	ft_check_builtin(&fd);
 	p = getcwd(p, 10000);
-	write (1, p, ft_strlen(p));
-	write (1, "\n", 1);
+	write (fd, p, ft_strlen(p));
+	write (fd, "\n", 1);
 	exit(0);
 }

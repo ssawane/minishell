@@ -6,7 +6,7 @@
 /*   By: ssawane <ssawane@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/14 15:22:08 by ssawane           #+#    #+#             */
-/*   Updated: 2022/07/25 21:09:31 by ssawane          ###   ########.fr       */
+/*   Updated: 2022/08/08 17:08:43 by ssawane          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -113,6 +113,7 @@ void	shell_init(char **envp)
 	g_b.cmds = NULL;
 	g_b.envv = NULL;
 	g_b.close = 0;
+	g_b.echo = 0;
 	g_b.exit = -1;
 	local_env(envp);
 	local_expenv();
